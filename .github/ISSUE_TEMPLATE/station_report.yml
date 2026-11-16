@@ -1,0 +1,55 @@
+name: Station report
+description: How the app gets on with your model or firmware
+labels: [station]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The app has been checked on a Venus E 3.0 with firmware 150 alone. What another model or firmware answers shows whether it reads that one right, so reports that everything works are as useful as reports that something does not.
+  - type: input
+    id: model
+    attributes:
+      label: Station model
+      placeholder: Venus C
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware
+      description: The Details window, the Station tab, the Device card.
+      placeholder: "154"
+    validations:
+      required: true
+  - type: dropdown
+    id: verdict
+    attributes:
+      label: How it works
+      options:
+        - Everything looks right
+        - Some values are wrong or missing
+        - The station does not answer
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Connection report
+      description: |
+        Settings, the Station tab, **Test connection**: the text that appears under the buttons, copied whole.
+        It names the station's IP and MAC addresses and the Wi-Fi network; blank them out if you would rather not share them.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: differences
+    attributes:
+      label: What is wrong
+      description: |
+        Which values differ from what the Marstek app or the station's own display shows, and what they show: a power ten times too large, an energy counter in other units, a row that says "no data".
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      description: At the bottom of the settings window.
+      placeholder: 1.0.0

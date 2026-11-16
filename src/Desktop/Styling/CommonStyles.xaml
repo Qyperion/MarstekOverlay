@@ -1,0 +1,44 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:MarstekOverlay.Desktop.Controls">
+
+    <!-- What the panel shares with the ordinary windows. Merged at the level of the application, after
+         Palette.xaml, because the panel does not take WindowStyles.xaml. -->
+
+    <!-- No room is kept for a text while there is nothing to say. -->
+    <Style x:Key="HiddenWhileEmpty" TargetType="TextBlock">
+        <Style.Triggers>
+            <Trigger Property="Text" Value="{x:Null}">
+                <Setter Property="Visibility" Value="Collapsed"/>
+            </Trigger>
+            <Trigger Property="Text" Value="">
+                <Setter Property="Visibility" Value="Collapsed"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ChartView" TargetType="controls:ChartView">
+        <Setter Property="ClipToBounds" Value="True"/>
+        <Setter Property="BandBrush" Value="{StaticResource Brush.ChartBand}"/>
+        <Setter Property="LoadBrush" Value="{StaticResource Brush.Info}"/>
+        <Setter Property="LoadFillBrush" Value="{StaticResource Brush.ChartLoadFill}"/>
+        <Setter Property="ChargeBrush" Value="{StaticResource Brush.Positive}"/>
+        <Setter Property="ChargeFillBrush" Value="{StaticResource Brush.ChartChargeFill}"/>
+        <Setter Property="OnBatteryBrush" Value="{StaticResource Brush.ChartOnBattery}"/>
+    </Style>
+
+    <Style TargetType="controls:LoadChartView" BasedOn="{StaticResource ChartView}"/>
+
+    <!-- The battery power takes the colour of the load while it feeds it and of the charge while it charges. -->
+    <Style TargetType="controls:HistoryChartView" BasedOn="{StaticResource ChartView}">
+        <Setter Property="GridBrush" Value="{StaticResource Brush.ChartGrid}"/>
+        <Setter Property="LabelBrush" Value="{StaticResource Brush.Secondary}"/>
+        <Setter Property="PointerBrush" Value="{StaticResource Brush.Primary}"/>
+        <Setter Property="LoadRangeBrush" Value="{StaticResource Brush.ChartLoadRange}"/>
+        <Setter Property="ChargingBrush" Value="{StaticResource Brush.Positive}"/>
+        <Setter Property="ChargingFillBrush" Value="{StaticResource Brush.ChartChargeFill}"/>
+        <Setter Property="DischargingBrush" Value="{StaticResource Brush.Info}"/>
+        <Setter Property="DischargingFillBrush" Value="{StaticResource Brush.ChartLoadFill}"/>
+    </Style>
+
+</ResourceDictionary>

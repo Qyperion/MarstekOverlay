@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    # WPF builds and its tests run on Windows alone.
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+
+      - name: Build
+        run: dotnet build MarstekOverlay.slnx -c Release
+
+      - name: Test
+        run: dotnet test --solution MarstekOverlay.slnx -c Release --no-build

@@ -1,0 +1,5 @@
+# The .editorconfig asks for CRLF, and the build checks it; this keeps a checkout on any machine in that form.
+* text=auto eol=crlf
+
+*.ico binary
+*.png binary

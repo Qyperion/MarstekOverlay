@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Units. {0} is the number; its decimal separator follows the regional format, not the language. -->
+  <data name="Unit_Watts" xml:space="preserve"><value>{0:0} W</value></data>
+  <data name="Unit_WattHours" xml:space="preserve"><value>{0:0.#} Wh</value></data>
+  <data name="Unit_KilowattHours" xml:space="preserve"><value>{0:0.##} kWh</value></data>
+  <data name="Unit_Percent" xml:space="preserve"><value>{0:0.#}%</value></data>
+  <data name="Unit_Celsius" xml:space="preserve"><value>{0:0.#} °C</value></data>
+  <data name="Unit_Volts" xml:space="preserve"><value>{0:0.#} V</value></data>
+  <data name="Unit_Amperes" xml:space="preserve"><value>{0:0.##} A</value></data>
+  <data name="Unit_Dbm" xml:space="preserve"><value>{0:0} dBm</value></data>
+  <data name="Unit_PercentUnknown" xml:space="preserve"><value>—%</value></data>
+
+  <data name="Common_Yes" xml:space="preserve"><value>yes</value></data>
+  <data name="Common_No" xml:space="preserve"><value>no</value></data>
+  <data name="Common_Labelled" xml:space="preserve"><value>{0}: {1}</value></data>
+  <data name="Common_NoValue" xml:space="preserve"><value>—</value></data>
+  <data name="Common_ListSeparator" xml:space="preserve"><value>, </value></data>
+  <data name="Report_CalculatedIfOnBattery" xml:space="preserve"><value>{0} (calculated; true only if the station is running on the battery)</value></data>
+
+  <!-- Panel -->
+  <data name="Overlay_Refresh" xml:space="preserve"><value>Refresh now</value></data>
+  <data name="Overlay_AlwaysOnTop" xml:space="preserve"><value>Always on top</value></data>
+  <data name="Overlay_Details" xml:space="preserve"><value>Details…</value></data>
+  <data name="Overlay_Settings" xml:space="preserve"><value>Settings…</value></data>
+  <data name="Overlay_DetailsTooltip" xml:space="preserve"><value>Details</value></data>
+  <data name="Overlay_SettingsTooltip" xml:space="preserve"><value>Settings</value></data>
+  <data name="Overlay_HideTooltip" xml:space="preserve"><value>Hide panel</value></data>
+  <data name="Overlay_Compact" xml:space="preserve"><value>Compact view</value></data>
+  <data name="Overlay_ClickThrough" xml:space="preserve"><value>Let clicks through</value></data>
+  <data name="Overlay_Exit" xml:space="preserve"><value>Exit</value></data>
+  <data name="Overlay_WaitingForData" xml:space="preserve"><value>Waiting for data</value></data>
+  <data name="Overlay_WaitingForFirstAnswer" xml:space="preserve"><value>Waiting for the first answer</value></data>
+  <data name="Overlay_NoDataYet" xml:space="preserve"><value>No data yet, retrying</value></data>
+  <data name="Overlay_SettingsRequired" xml:space="preserve"><value>Settings required</value></data>
+  <data name="Overlay_NoFreshData" xml:space="preserve"><value>No fresh data</value></data>
+  <data name="Overlay_Charging" xml:space="preserve"><value>Charging</value></data>
+  <data name="Overlay_Discharging" xml:space="preserve"><value>Discharging</value></data>
+  <data name="Overlay_Idle" xml:space="preserve"><value>Idle</value></data>
+  <data name="Overlay_NoData" xml:space="preserve"><value>No data</value></data>
+  <data name="Overlay_OnBattery" xml:space="preserve"><value>On battery · {0}</value></data>
+  <data name="Overlay_OnMains" xml:space="preserve"><value>On mains</value></data>
+  <data name="Overlay_OnMainsCharging" xml:space="preserve"><value>On mains · charging</value></data>
+  <data name="Supply_BatterySince" xml:space="preserve"><value>On battery since {0}.</value></data>
+  <data name="Supply_MainsSince" xml:space="preserve"><value>On mains since {0}.</value></data>
+  <data name="Supply_SwitchUnseen" xml:space="preserve"><value>The app did not see when that began, so it may have been longer.</value></data>
+  <data name="Duration_HoursMinutes" xml:space="preserve"><value>{0} h {1:00} min</value></data>
+  <data name="Duration_Minutes" xml:space="preserve"><value>{0} min</value></data>
+  <data name="Duration_UnderMinute" xml:space="preserve"><value>less than a minute</value></data>
+  <data name="Duration_AtLeast" xml:space="preserve"><value>at least {0}</value></data>
+  <data name="Duration_Seconds" xml:space="preserve"><value>{0} s</value></data>
+  <data name="Age_JustNow" xml:space="preserve"><value>just now</value></data>
+  <data name="Age_Ago" xml:space="preserve"><value>{0} ago</value></data>
+  <data name="Moment_Yesterday" xml:space="preserve"><value>yesterday {0}</value></data>
+  <data name="Moment_OnDate" xml:space="preserve"><value>{0} {1}</value></data>
+  <data name="Common_AnsweredAt" xml:space="preserve"><value>Latest answer at {0}.</value></data>
+  <data name="Overlay_Stale" xml:space="preserve"><value>Data from {0} is stale</value></data>
+  <data name="Overlay_Battery" xml:space="preserve"><value>Battery</value></data>
+  <data name="Overlay_Grid" xml:space="preserve"><value>Grid</value></data>
+  <data name="Overlay_BackupOutput" xml:space="preserve"><value>Backup output</value></data>
+  <data name="Overlay_Solar" xml:space="preserve"><value>Solar</value></data>
+  <data name="Overlay_StoredEnergy" xml:space="preserve"><value>Energy left</value></data>
+  <data name="Overlay_BatteryTemperature" xml:space="preserve"><value>Battery temperature</value></data>
+  <data name="Overlay_WifiSignal" xml:space="preserve"><value>Wi-Fi signal</value></data>
+  <data name="Overlay_OperatingMode" xml:space="preserve"><value>Mode</value></data>
+  <data name="Overlay_CurrentOutage" xml:space="preserve"><value>Outage</value></data>
+  <data name="Overlay_LatestOutage" xml:space="preserve"><value>Last outage</value></data>
+  <data name="Outage_NotNow" xml:space="preserve"><value>none now</value></data>
+  <data name="Outage_NoneRecorded" xml:space="preserve"><value>none recorded</value></data>
+  <data name="Outage_Summary" xml:space="preserve"><value>{0} · {1}</value></data>
+  <data name="Outage_LatestSummary" xml:space="preserve"><value>{0} · {1} · {2}</value></data>
+  <data name="Outage_Period" xml:space="preserve"><value>From {0} to {1}.</value></data>
+  <data name="Outage_Charge" xml:space="preserve"><value>Charge {0}.</value></data>
+  <data name="Outage_StartUnseen" xml:space="preserve"><value>It had begun before the app first saw it.</value></data>
+  <data name="Outage_EndUnseen" xml:space="preserve"><value>The app did not see it end, only when it was last going on.</value></data>
+  <data name="Overlay_ValueMissing" xml:space="preserve"><value>no data</value></data>
+  <data name="Overlay_ValueUnavailable" xml:space="preserve"><value>unavailable</value></data>
+  <data name="Forecast_NotEnoughData" xml:space="preserve"><value>Forecast: not enough data</value></data>
+  <data name="Forecast_Collecting" xml:space="preserve"><value>Forecast: collecting data</value></data>
+  <data name="Forecast_LoadTooLow" xml:space="preserve"><value>Forecast: load too low</value></data>
+  <data name="Forecast_ReserveReached" xml:space="preserve"><value>Reserve of {0} reached</value></data>
+  <data name="Forecast_Remaining" xml:space="preserve"><value>≈ {0} · until {1}</value></data>
+  <data name="Forecast_ChargeRemaining" xml:space="preserve"><value>Full in ≈ {0} · by {1}</value></data>
+  <data name="Forecast_Standby" xml:space="preserve"><value>Would last ≈ {0}</value></data>
+  <data name="Forecast_LessThan" xml:space="preserve"><value>Less than {0} min to {1}</value></data>
+  <data name="Forecast_MoreThan" xml:space="preserve"><value>More than {0} days to {1}</value></data>
+  <data name="Forecast_Tomorrow" xml:space="preserve"><value>{0} tomorrow</value></data>
+  <data name="Forecast_OnDay" xml:space="preserve"><value>{0} {1}</value></data>
+  <data name="Forecast_Hint" xml:space="preserve"><value>Time until the charge drops to the reserve of {2}, at the load averaged over the last {0} minutes and with {1} of what the battery gives up reaching the outputs. Not a guarantee.</value></data>
+  <data name="Forecast_ChargeHint" xml:space="preserve"><value>Time until the battery is full, at the charging power averaged over the last {0} minutes and with {1} of it reaching the battery. Charging slows down near the top, so it can take longer.</value></data>
+  <data name="Forecast_StandbyHint" xml:space="preserve"><value>How long the battery would carry the present load on the backup output down to the reserve of {2} if the mains failed now. The load is averaged over the last {0} minutes, and {1} of what the battery gives up reaches the outputs. Not a guarantee.</value></data>
+
+  <!-- The forecast on the single line of the compact panel -->
+  <data name="Compact_Remaining" xml:space="preserve"><value>≈ {0}</value></data>
+  <data name="Compact_ChargeRemaining" xml:space="preserve"><value>full in ≈ {0}</value></data>
+  <data name="Compact_LessThan" xml:space="preserve"><value>&lt; {0} min</value></data>
+  <data name="Compact_MoreThan" xml:space="preserve"><value>&gt; {0} days</value></data>
+
+  <!-- Chart under the charge bar -->
+  <data name="Chart_Hours" xml:space="preserve"><value>{0:0} h</value></data>
+  <data name="Chart_Days" xml:space="preserve"><value>{0:0} d</value></data>
+  <data name="Chart_Summary" xml:space="preserve"><value>Load on the backup output over {0}: min {1} · average {2} · max {3}.</value></data>
+  <data name="Chart_Legend" xml:space="preserve"><value>The upper band is the load, {0} at its full height; the lower one is the charge, from {1} to {2}. Time on the battery is shaded.</value></data>
+  <data name="Chart_NoSamples" xml:space="preserve"><value>No readings over {0} yet.</value></data>
+
+  <!-- Warnings on the panel -->
+  <data name="Alert_LowChargeRow" xml:space="preserve"><value>Low charge (threshold {0})</value></data>
+  <data name="Alert_CriticalChargeRow" xml:space="preserve"><value>Critically low charge (threshold {0})</value></data>
+  <data name="Alert_TooHotRow" xml:space="preserve"><value>Battery too hot: {0} (limit {1})</value></data>
+  <data name="Alert_TooColdRow" xml:space="preserve"><value>Battery too cold: {0} (limit {1})</value></data>
+  <data name="Alert_DischargingForbiddenRow" xml:space="preserve"><value>The station forbids discharging</value></data>
+  <data name="Alert_ChargingForbiddenRow" xml:space="preserve"><value>The station forbids charging</value></data>
+
+  <!-- Notifications -->
+  <data name="Alert_MainsLostTitle" xml:space="preserve"><value>Mains power lost</value></data>
+  <data name="Alert_MainsLostText" xml:space="preserve"><value>The station is running on the battery.</value></data>
+  <data name="Alert_OnBatteryTitle" xml:space="preserve"><value>The station is running on the battery</value></data>
+  <data name="Alert_OnBatteryText" xml:space="preserve"><value>The outage began while the app was not following the station.</value></data>
+  <data name="Alert_MainsRestoredTitle" xml:space="preserve"><value>Mains power is back</value></data>
+  <data name="Alert_MainsRestoredText" xml:space="preserve"><value>The outage lasted {0} and took {1}.</value></data>
+  <data name="Alert_MainsRestoredTextNoOutage" xml:space="preserve"><value>The station is on the mains again.</value></data>
+  <data name="Alert_ChargeNow" xml:space="preserve"><value>Charge: {0}.</value></data>
+  <data name="Alert_LowChargeTitle" xml:space="preserve"><value>Battery charge is low</value></data>
+  <data name="Alert_CriticalChargeTitle" xml:space="preserve"><value>Battery charge is critically low</value></data>
+  <data name="Alert_LowChargeText" xml:space="preserve"><value>The charge is down to {0}; the threshold is {1}.</value></data>
+  <data name="Alert_TemperatureTitle" xml:space="preserve"><value>Battery temperature out of range</value></data>
+  <data name="Alert_TooHotText" xml:space="preserve"><value>The battery is at {0}, above the limit of {1}.</value></data>
+  <data name="Alert_TooColdText" xml:space="preserve"><value>The battery is at {0}, below the limit of {1}.</value></data>
+  <data name="Alert_DischargingForbiddenTitle" xml:space="preserve"><value>Discharging is forbidden</value></data>
+  <data name="Alert_DischargingForbiddenText" xml:space="preserve"><value>The station reports that the battery may not discharge.</value></data>
+  <data name="Alert_ChargingForbiddenTitle" xml:space="preserve"><value>Charging is forbidden</value></data>
+  <data name="Alert_ChargingForbiddenText" xml:space="preserve"><value>The station reports that the battery may not charge.</value></data>
+  <data name="Alert_StaleTitle" xml:space="preserve"><value>The station is not answering</value></data>
+  <data name="Alert_StaleText" xml:space="preserve"><value>Latest answer: {0}.</value></data>
+  <data name="Alert_StaleTextNoAnswer" xml:space="preserve"><value>No answer has come yet.</value></data>
+  <data name="Common_ProductName" xml:space="preserve"><value>Marstek Overlay</value></data>
+  <data name="Alert_TestText" xml:space="preserve"><value>This is what a notification looks like.</value></data>
+
+  <!-- Kinds of alerts, as listed in the settings -->
+  <data name="AlertKind_MainsLost" xml:space="preserve"><value>Mains power lost</value></data>
+  <data name="AlertKind_MainsRestored" xml:space="preserve"><value>Mains power is back</value></data>
+  <data name="AlertKind_LowCharge" xml:space="preserve"><value>Charge down to a threshold</value></data>
+  <data name="AlertKind_BatteryTemperature" xml:space="preserve"><value>Battery temperature out of range</value></data>
+  <data name="AlertKind_FlowForbidden" xml:space="preserve"><value>Charging or discharging forbidden</value></data>
+  <data name="AlertKind_StaleData" xml:space="preserve"><value>The station is not answering</value></data>
+
+  <!-- Names of the panel rows, as listed in the settings -->
+  <data name="Row_Forecast" xml:space="preserve"><value>Runtime forecast</value></data>
+  <data name="Row_Battery" xml:space="preserve"><value>Battery power</value></data>
+  <data name="Row_StoredEnergy" xml:space="preserve"><value>Energy left</value></data>
+  <data name="Row_CurrentOutage" xml:space="preserve"><value>Current outage</value></data>
+  <data name="Row_LatestOutage" xml:space="preserve"><value>Last outage</value></data>
+  <data name="Row_Grid" xml:space="preserve"><value>Grid power</value></data>
+  <data name="Row_BackupOutput" xml:space="preserve"><value>Backup output power</value></data>
+  <data name="Row_Solar" xml:space="preserve"><value>Solar power</value></data>
+  <data name="Row_BatteryTemperature" xml:space="preserve"><value>Battery temperature</value></data>
+  <data name="Row_WifiSignal" xml:space="preserve"><value>Wi-Fi signal</value></data>
+  <data name="Row_OperatingMode" xml:space="preserve"><value>Operating mode</value></data>
+
+  <!-- Notification-area icon -->
+  <data name="Tray_ShowPanel" xml:space="preserve"><value>Show panel</value></data>
+  <data name="Tray_HidePanel" xml:space="preserve"><value>Hide panel</value></data>
+
+  <!-- An error the app does not get over -->
+  <data name="Failure_Text" xml:space="preserve"><value>Marstek Overlay has run into an error it cannot recover from and will close.</value></data>
+  <data name="Failure_Log" xml:space="preserve"><value>Details are in the log: {0}</value></data>
+
+  <!-- Why a file or the registry was left as it was, put after a colon -->
+  <data name="Failure_NoAccess" xml:space="preserve"><value>access is denied</value></data>
+  <data name="Failure_FileUnavailable" xml:space="preserve"><value>the file is in use by another program or cannot be reached</value></data>
+  <data name="Failure_Unexpected" xml:space="preserve"><value>an unexpected error occurred</value></data>
+
+  <!-- Settings window -->
+  <data name="Settings_Title" xml:space="preserve"><value>Marstek Overlay — settings</value></data>
+  <data name="Settings_Station" xml:space="preserve"><value>Station</value></data>
+  <data name="Settings_IpAddress" xml:space="preserve"><value>IP address</value></data>
+  <data name="Settings_UdpPort" xml:space="preserve"><value>UDP port</value></data>
+  <data name="Settings_FindStations" xml:space="preserve"><value>Find stations on the network</value></data>
+  <data name="Settings_TestConnection" xml:space="preserve"><value>Test connection</value></data>
+  <data name="Settings_Panel" xml:space="preserve"><value>Panel</value></data>
+  <data name="Settings_Appearance" xml:space="preserve"><value>Appearance</value></data>
+  <data name="Settings_CompactHint" xml:space="preserve"><value>One line instead of the card: the charge, the load and the forecast.</value></data>
+  <data name="Settings_Behaviour" xml:space="preserve"><value>Behaviour</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>General</value></data>
+  <data name="Settings_Application" xml:space="preserve"><value>Application</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Language</value></data>
+  <data name="Settings_Autostart" xml:space="preserve"><value>Start with Windows</value></data>
+  <data name="Settings_AutostartFailed" xml:space="preserve"><value>The startup entry in the registry could not be changed: {0}.</value></data>
+  <data name="Settings_BackgroundOpacity" xml:space="preserve"><value>Background opacity</value></data>
+  <data name="Settings_PanelScale" xml:space="preserve"><value>Panel scale</value></data>
+  <data name="Settings_ClickThroughHint" xml:space="preserve"><value>The panel stops reacting to the mouse, and every click goes to the window under it. Switch this back from the icon in the notification area.</value></data>
+  <data name="Settings_HiddenAtStartup" xml:space="preserve"><value>Start with the panel hidden</value></data>
+  <data name="Settings_HiddenAtStartupHint" xml:space="preserve"><value>After a start only the icon in the notification area is there; its menu item "Show panel" brings the panel.</value></data>
+  <data name="Settings_ShownRows" xml:space="preserve"><value>Show on the panel</value></data>
+  <data name="Settings_LoadChart" xml:space="preserve"><value>Load and charge chart</value></data>
+  <data name="Settings_ChartPeriod" xml:space="preserve"><value>Period</value></data>
+  <data name="Settings_Forecast" xml:space="preserve"><value>Runtime forecast</value></data>
+  <data name="Settings_ReserveLevel" xml:space="preserve"><value>Reserve level, %</value></data>
+  <data name="Settings_DischargeEfficiency" xml:space="preserve"><value>Discharge efficiency, %</value></data>
+  <data name="Settings_ChargeEfficiency" xml:space="preserve"><value>Charge efficiency, %</value></data>
+  <data name="Settings_ForecastHint" xml:space="preserve"><value>The forecast counts down to the reserve level. The discharge efficiency is the share of what the battery gives up that reaches the outputs; the charge efficiency is the share of what the station draws that ends up in the battery. None of these values changes anything on the station.</value></data>
+  <data name="Settings_Alerts" xml:space="preserve"><value>Alerts</value></data>
+  <data name="Settings_AlertKinds" xml:space="preserve"><value>Notify about</value></data>
+  <data name="Settings_AlertsNote" xml:space="preserve"><value>Windows shows a notification when any of the ticked things happens. A low charge, a temperature beyond the limits or a ban also stays on the panel as a warning for as long as it lasts.</value></data>
+  <data name="Settings_AlertLimits" xml:space="preserve"><value>Limits</value></data>
+  <data name="Settings_ChargeThresholds" xml:space="preserve"><value>Charge thresholds, %</value></data>
+  <data name="Settings_ChargeThresholdsHint" xml:space="preserve"><value>One notification each time the charge comes down to a threshold; the lowest one is the critical one. The charge bar turns yellow from the highest threshold and red from the lowest. Separate the thresholds with spaces or semicolons: a comma is a decimal one.</value></data>
+  <data name="Settings_BatteryTemperatureFrom" xml:space="preserve"><value>Battery temperature, °C: from</value></data>
+  <data name="Settings_BatteryTemperatureTo" xml:space="preserve"><value>to</value></data>
+  <data name="Settings_StaleAfter" xml:space="preserve"><value>No answer for longer than, min</value></data>
+  <data name="Settings_StaleAfterInEffect" xml:space="preserve"><value>In effect: {0:0.#} min, at least two poll intervals.</value></data>
+  <data name="Settings_TestNotification" xml:space="preserve"><value>Show a test notification</value></data>
+  <data name="Settings_InvalidChargeThresholds" xml:space="preserve"><value>The charge thresholds must be numbers from {0} to {1}, separated by spaces or semicolons.</value></data>
+  <data name="Settings_InvalidTemperatureLimits" xml:space="preserve"><value>The battery temperature limits must lie between {0} and {1} °C, the lower one below the upper.</value></data>
+  <data name="Settings_InvalidStaleAfter" xml:space="preserve"><value>The time without an answer must be from {0} to {1} minutes.</value></data>
+  <data name="Settings_Save" xml:space="preserve"><value>Save</value></data>
+  <data name="Settings_Close" xml:space="preserve"><value>Close</value></data>
+  <data name="Settings_Version" xml:space="preserve"><value>Version</value></data>
+  <data name="Settings_ReadOnlyNote" xml:space="preserve"><value>The app only reads from the station and never changes how it works.</value></data>
+  <data name="Settings_AddressFilledIn" xml:space="preserve"><value>Address of {0} filled in. Test the connection, then save.</value></data>
+  <data name="Settings_Searching" xml:space="preserve"><value>Looking for stations on UDP port {0}…</value></data>
+  <data name="Settings_NoStationFound" xml:space="preserve"><value>No station answered. The computer and the station must be on the same network, with Local API enabled in the Marstek app on this very port.</value></data>
+  <data name="Settings_StationsFound" xml:space="preserve"><value>Stations found: {0}. Select one to use its address.</value></data>
+  <data name="Settings_Reading" xml:space="preserve"><value>Reading everything {0} reports, one request a second…</value></data>
+  <data name="Settings_Answered" xml:space="preserve"><value>{0} answered. Everything it reports is listed below.</value></data>
+  <data name="Settings_NoAnswer" xml:space="preserve"><value>{0} did not answer. Check the address, the port and that Local API is enabled in the Marstek app. Details: {1}</value></data>
+  <data name="Settings_NoAnswerWithoutLog" xml:space="preserve"><value>{0} did not answer. Check the address, the port and that Local API is enabled in the Marstek app.</value></data>
+  <data name="Settings_SearchFailed" xml:space="preserve"><value>The search failed. Details: {0}</value></data>
+  <data name="Settings_FoundStation" xml:space="preserve"><value>{0} — {1}, v{2}</value></data>
+  <data name="Settings_FoundStationWithoutVersion" xml:space="preserve"><value>{0} — {1}</value></data>
+  <data name="Settings_MinBatteryTemperature" xml:space="preserve"><value>Lowest battery temperature, °C</value></data>
+  <data name="Settings_MaxBatteryTemperature" xml:space="preserve"><value>Highest battery temperature, °C</value></data>
+  <data name="Settings_InvalidPort" xml:space="preserve"><value>The port must be a number from 1 to 65535.</value></data>
+  <data name="Settings_InvalidAddress" xml:space="preserve"><value>The station address must be an IPv4 address such as 192.168.1.50.</value></data>
+  <data name="Settings_InvalidReserve" xml:space="preserve"><value>The reserve level must be from {0} to {1}%.</value></data>
+  <data name="Settings_InvalidEfficiency" xml:space="preserve"><value>The efficiency must be from {0} to {1}%.</value></data>
+  <data name="Settings_FixMarked" xml:space="preserve"><value>The values marked in red need correcting.</value></data>
+  <data name="Settings_UnsavedChanges" xml:space="preserve"><value>The address or the numbers were changed and not saved. Press Close once more to drop the changes, or Save to keep them.</value></data>
+
+  <!-- Settings window: deleting what was recorded -->
+  <data name="StoredData_Title" xml:space="preserve"><value>Delete stored data</value></data>
+  <data name="StoredData_Samples" xml:space="preserve"><value>Measurements for the charts</value></data>
+  <data name="StoredData_Outages" xml:space="preserve"><value>Outage journal</value></data>
+  <data name="StoredData_Log" xml:space="preserve"><value>Diagnostic log</value></data>
+  <data name="StoredData_Keep" xml:space="preserve"><value>Keep</value></data>
+  <data name="KeptPeriod_Nothing" xml:space="preserve"><value>nothing</value></data>
+  <data name="KeptPeriod_Day" xml:space="preserve"><value>the last day</value></data>
+  <data name="KeptPeriod_Week" xml:space="preserve"><value>the last week</value></data>
+  <data name="KeptPeriod_Month" xml:space="preserve"><value>the last month</value></data>
+  <data name="StoredData_Delete" xml:space="preserve"><value>Delete…</value></data>
+  <data name="StoredData_Hint" xml:space="preserve"><value>Deletes what is ticked, except for the period kept: 24 hours, 7 days or 30 days back from now. Nothing brings the deleted back. An outage that is still going on stays in the journal.</value></data>
+  <data name="StoredData_ConfirmAll" xml:space="preserve"><value>Delete all of this?</value></data>
+  <data name="StoredData_ConfirmKeeping" xml:space="preserve"><value>Delete this, keeping {0}?</value></data>
+  <data name="StoredData_CannotBeRestored" xml:space="preserve"><value>It cannot be restored.</value></data>
+  <data name="StoredData_SamplesDeleted" xml:space="preserve"><value>Measurements deleted: {0:N0}.</value></data>
+  <data name="StoredData_OutagesDeleted" xml:space="preserve"><value>Outages deleted: {0:N0}.</value></data>
+  <data name="StoredData_LogCleared" xml:space="preserve"><value>The diagnostic log is cleared.</value></data>
+  <data name="StoredData_LogFailed" xml:space="preserve"><value>The diagnostic log was not cleared: {0}.</value></data>
+  <data name="StoredData_LogPartlyCleared" xml:space="preserve"><value>The diagnostic log is cleared only in part: {0}.</value></data>
+
+  <!-- Details window -->
+  <data name="Details_Title" xml:space="preserve"><value>Marstek Overlay — details</value></data>
+  <data name="Details_Outages" xml:space="preserve"><value>Outages</value></data>
+  <data name="Details_Charts" xml:space="preserve"><value>Charts</value></data>
+  <data name="Details_LoadAxis" xml:space="preserve"><value>Load on the backup output, W</value></data>
+  <data name="Details_ChargeAxis" xml:space="preserve"><value>Charge, %</value></data>
+  <data name="Details_BatteryAxis" xml:space="preserve"><value>Battery power, W: charging above zero, discharging below</value></data>
+  <data name="Details_ChartMoment" xml:space="preserve"><value>{0}: {1}</value></data>
+  <data name="Details_ChartLoad" xml:space="preserve"><value>load {0}</value></data>
+  <data name="Details_ChartLoadWithMax" xml:space="preserve"><value>load {0} (max {1})</value></data>
+  <data name="Details_ChartCharge" xml:space="preserve"><value>charge {0}</value></data>
+  <data name="Battery_Charging" xml:space="preserve"><value>charging {0}</value></data>
+  <data name="Battery_Discharging" xml:space="preserve"><value>discharging {0}</value></data>
+  <data name="Details_ChartBatteryIdle" xml:space="preserve"><value>battery {0}</value></data>
+  <data name="Details_ChartOnBattery" xml:space="preserve"><value>on battery</value></data>
+  <data name="Details_ChartLegend" xml:space="preserve"><value>A break in a line is a time without readings. Point at a chart to read the values at a moment.</value></data>
+  <data name="Details_LegendLoad" xml:space="preserve"><value>Load, battery discharging</value></data>
+  <data name="Details_LegendCharge" xml:space="preserve"><value>Charge, battery charging</value></data>
+  <data name="Details_LegendLoadRange" xml:space="preserve"><value>Lowest to highest reading of each point</value></data>
+  <data name="Details_LegendOnBattery" xml:space="preserve"><value>Time on the battery</value></data>
+  <data name="Details_CardStale" xml:space="preserve"><value>The station has stopped answering this request.</value></data>
+  <data name="Details_PowerGroup" xml:space="preserve"><value>Power</value></data>
+  <data name="Details_DeviceGroup" xml:space="preserve"><value>Device and connection</value></data>
+  <data name="Details_AccessoriesGroup" xml:space="preserve"><value>Accessories</value></data>
+  <data name="Details_AccessoriesHint" xml:space="preserve"><value>Checked when the app starts. A station without a CT or solar inputs is not asked about them again until you check.</value></data>
+  <data name="Details_CheckAccessories" xml:space="preserve"><value>Check again</value></data>
+  <data name="Journal_Today" xml:space="preserve"><value>Today</value></data>
+  <data name="Journal_ThisWeek" xml:space="preserve"><value>This week</value></data>
+  <data name="Journal_ThisMonth" xml:space="preserve"><value>This month</value></data>
+  <data name="Journal_None" xml:space="preserve"><value>no outages</value></data>
+  <data name="Journal_Count" xml:space="preserve"><value>Outages: {0}</value></data>
+  <data name="Journal_Note" xml:space="preserve"><value>The totals count from midnight, from the first day of the week and from the first day of the month. An outage that crosses the start of a period counts towards it with the part inside it, and with the energy the recorded load puts into that part, or a share by time where none was recorded.</value></data>
+  <data name="Journal_MonthTotal" xml:space="preserve"><value>Month total</value></data>
+  <data name="Journal_Empty" xml:space="preserve"><value>No outage has been recorded in this month.</value></data>
+  <data name="Journal_PreviousMonth" xml:space="preserve"><value>Earlier month</value></data>
+  <data name="Journal_NextMonth" xml:space="preserve"><value>Later month</value></data>
+  <data name="Journal_Export" xml:space="preserve"><value>Export to CSV…</value></data>
+  <data name="Journal_ExportHint" xml:space="preserve"><value>Saves the outages of the month shown as a file for Excel.</value></data>
+  <data name="Journal_ExportFilter" xml:space="preserve"><value>CSV files (*.csv)|*.csv</value></data>
+  <data name="Journal_Exported" xml:space="preserve"><value>Saved to {0}.</value></data>
+  <data name="Journal_ExportFailed" xml:space="preserve"><value>The file was not saved: {0}.</value></data>
+  <data name="Export_Energy" xml:space="preserve"><value>Energy, Wh</value></data>
+  <data name="Export_StartCharge" xml:space="preserve"><value>Charge at the start, %</value></data>
+  <data name="Export_EndCharge" xml:space="preserve"><value>Charge at the end, %</value></data>
+  <data name="Export_StartUnseen" xml:space="preserve"><value>Start not seen</value></data>
+  <data name="Export_EndUnseen" xml:space="preserve"><value>End not seen</value></data>
+  <data name="Export_MonthBound" xml:space="preserve"><value>Cut by the month</value></data>
+  <data name="Export_BeganEarlier" xml:space="preserve"><value>began earlier</value></data>
+  <data name="Export_WentOnLater" xml:space="preserve"><value>went on later</value></data>
+  <data name="Journal_Started" xml:space="preserve"><value>Began</value></data>
+  <data name="Journal_Ended" xml:space="preserve"><value>Ended</value></data>
+  <data name="Journal_Duration" xml:space="preserve"><value>Duration</value></data>
+  <data name="Journal_Energy" xml:space="preserve"><value>Energy</value></data>
+  <data name="Journal_Charge" xml:space="preserve"><value>Charge</value></data>
+  <data name="Journal_Ongoing" xml:space="preserve"><value>ongoing</value></data>
+  <data name="Outage_ChargeChange" xml:space="preserve"><value>{0} → {1}</value></data>
+
+  <!-- Station report and the cards of the details window -->
+  <data name="Report_NotSupported" xml:space="preserve"><value>not supported by this station</value></data>
+  <data name="Report_NoAnswer" xml:space="preserve"><value>no answer</value></data>
+  <data name="Report_Errors" xml:space="preserve"><value>Errors</value></data>
+  <data name="Report_SectionHeading" xml:space="preserve"><value>{0} ({1})</value></data>
+  <data name="Error_NoAnswer" xml:space="preserve"><value>The station did not answer {0} within {1:0.#} s.</value></data>
+  <data name="Error_Refused" xml:space="preserve"><value>The station answered {0} with an error: {1} (code {2}).</value></data>
+  <data name="Report_Device" xml:space="preserve"><value>Device</value></data>
+  <data name="Report_Model" xml:space="preserve"><value>Model</value></data>
+  <data name="Report_Firmware" xml:space="preserve"><value>Firmware</value></data>
+  <data name="Report_Family" xml:space="preserve"><value>Family</value></data>
+  <data name="DeviceFamily_Unknown" xml:space="preserve"><value>unknown</value></data>
+  <data name="DeviceFamily_VenusA" xml:space="preserve"><value>Venus A</value></data>
+  <data name="DeviceFamily_VenusC" xml:space="preserve"><value>Venus C</value></data>
+  <data name="DeviceFamily_VenusD" xml:space="preserve"><value>Venus D</value></data>
+  <data name="DeviceFamily_VenusE" xml:space="preserve"><value>Venus E 3.0</value></data>
+  <data name="DeviceFamily_VenusE2" xml:space="preserve"><value>Venus E 2.0</value></data>
+  <data name="DeviceFamily_VenusEMini" xml:space="preserve"><value>Venus E Mini</value></data>
+  <data name="Report_BluetoothMac" xml:space="preserve"><value>Bluetooth MAC</value></data>
+  <data name="Report_WifiMac" xml:space="preserve"><value>Wi-Fi MAC</value></data>
+  <data name="Report_WifiNetwork" xml:space="preserve"><value>Wi-Fi network</value></data>
+  <data name="Report_ReportedIp" xml:space="preserve"><value>Reported IP</value></data>
+  <data name="Report_EnergySystem" xml:space="preserve"><value>Energy system</value></data>
+  <data name="Report_StateOfCharge" xml:space="preserve"><value>State of charge</value></data>
+  <data name="Report_BatteryCapacity" xml:space="preserve"><value>Battery capacity</value></data>
+  <data name="Report_BatteryPower" xml:space="preserve"><value>Battery power</value></data>
+  <data name="Report_SolarPower" xml:space="preserve"><value>Solar power</value></data>
+  <data name="Report_GridPower" xml:space="preserve"><value>Grid power</value></data>
+  <data name="Report_BackupOutputPower" xml:space="preserve"><value>Backup output power</value></data>
+  <data name="Report_TotalSolarEnergy" xml:space="preserve"><value>Total solar energy</value></data>
+  <data name="Report_TotalEnergyToGrid" xml:space="preserve"><value>Total energy to grid</value></data>
+  <data name="Report_TotalEnergyFromGrid" xml:space="preserve"><value>Total energy from grid</value></data>
+  <data name="Report_TotalLoadEnergy" xml:space="preserve"><value>Total load energy</value></data>
+  <data name="Report_OperatingMode" xml:space="preserve"><value>Operating mode</value></data>
+  <data name="Report_Mode" xml:space="preserve"><value>Mode</value></data>
+  <data name="Report_EnergyMeter" xml:space="preserve"><value>Energy meter</value></data>
+  <data name="Report_CtConnected" xml:space="preserve"><value>CT connected</value></data>
+  <data name="Report_CtNotConnected" xml:space="preserve"><value>CT not connected</value></data>
+  <data name="Report_PhaseAPower" xml:space="preserve"><value>Phase A power</value></data>
+  <data name="Report_PhaseBPower" xml:space="preserve"><value>Phase B power</value></data>
+  <data name="Report_PhaseCPower" xml:space="preserve"><value>Phase C power</value></data>
+  <data name="Report_TotalPower" xml:space="preserve"><value>Total power</value></data>
+  <data name="Report_InputEnergy" xml:space="preserve"><value>Input energy</value></data>
+  <data name="Report_OutputEnergy" xml:space="preserve"><value>Output energy</value></data>
+  <data name="Report_SolarInputs" xml:space="preserve"><value>Solar inputs</value></data>
+  <data name="Report_SolarInput" xml:space="preserve"><value>Input {0}</value></data>
+  <data name="Report_Working" xml:space="preserve"><value>working</value></data>
+  <data name="Report_Standby" xml:space="preserve"><value>standby</value></data>
+  <data name="Report_Battery" xml:space="preserve"><value>Battery</value></data>
+  <data name="Report_Temperature" xml:space="preserve"><value>Temperature</value></data>
+  <data name="Report_RemainingCapacity" xml:space="preserve"><value>Remaining capacity</value></data>
+  <data name="Report_RatedCapacity" xml:space="preserve"><value>Rated capacity</value></data>
+  <data name="Report_ChargingAllowed" xml:space="preserve"><value>Charging allowed</value></data>
+  <data name="Report_DischargingAllowed" xml:space="preserve"><value>Discharging allowed</value></data>
+  <data name="Report_Wifi" xml:space="preserve"><value>Wi-Fi</value></data>
+  <data name="Report_Network" xml:space="preserve"><value>Network</value></data>
+  <data name="Report_Signal" xml:space="preserve"><value>Signal</value></data>
+  <data name="Signal_Excellent" xml:space="preserve"><value>excellent</value></data>
+  <data name="Signal_Good" xml:space="preserve"><value>good</value></data>
+  <data name="Signal_Fair" xml:space="preserve"><value>fair</value></data>
+  <data name="Signal_Weak" xml:space="preserve"><value>weak</value></data>
+  <data name="Report_Ip" xml:space="preserve"><value>IP</value></data>
+  <data name="Report_Gateway" xml:space="preserve"><value>Gateway</value></data>
+  <data name="Report_SubnetMask" xml:space="preserve"><value>Subnet mask</value></data>
+  <data name="Report_Dns" xml:space="preserve"><value>DNS</value></data>
+  <data name="Report_Mac" xml:space="preserve"><value>MAC</value></data>
+  <data name="Report_Bluetooth" xml:space="preserve"><value>Bluetooth</value></data>
+  <data name="Report_State" xml:space="preserve"><value>State</value></data>
+  <data name="Report_BluetoothConnected" xml:space="preserve"><value>connected</value></data>
+  <data name="Report_BluetoothDisconnected" xml:space="preserve"><value>not connected</value></data>
+</root>

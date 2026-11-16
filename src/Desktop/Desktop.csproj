@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net11.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <!-- Only for the notification-area icon, which WPF does not have. -->
+    <UseWindowsForms>true</UseWindowsForms>
+
+    <AssemblyName>MarstekOverlay</AssemblyName>
+    <Version>1.0.0</Version>
+    <Product>Marstek Overlay</Product>
+    <Authors>Qyperion</Authors>
+    <Copyright>Copyright © 2026 Qyperion</Copyright>
+    <NeutralLanguage>en</NeutralLanguage>
+    <!-- The languages of AppLanguages. A self-contained publish would otherwise carry the framework's texts
+         in a dozen languages the app does not speak. -->
+    <SatelliteResourceLanguages>en;uk</SatelliteResourceLanguages>
+    <!-- Drawn by tools/AppIcon/New-AppIcon.ps1. The windows take it from the exe, so none of them names it. -->
+    <ApplicationIcon>Assets\App.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Their type names collide with WPF's (Application, Color, Button). -->
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="11.0.0" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="10.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Monitoring\Monitoring.csproj" />
+    <ProjectReference Include="..\Storage\Storage.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Generates the Strings class at build time, so there is no designer file to keep in sync by hand. -->
+    <EmbeddedResource Update="Localization\Strings.resx">
+      <Generator>MSBuild:Compile</Generator>
+      <StronglyTypedFileName>$(IntermediateOutputPath)Strings.Designer.cs</StronglyTypedFileName>
+      <StronglyTypedLanguage>CSharp</StronglyTypedLanguage>
+      <StronglyTypedNamespace>MarstekOverlay.Desktop.Localization</StronglyTypedNamespace>
+      <StronglyTypedClassName>Strings</StronglyTypedClassName>
+    </EmbeddedResource>
+
+    <!-- WPF compiles XAML against a temporary copy of this project, which neither generates resources nor
+         inherits the Compile items a target adds, so that copy is handed the class the real build produced. -->
+    <Compile Include="$(IntermediateOutputPath)Strings.Designer.cs" Condition="$(MSBuildProjectName.EndsWith('_wpftmp'))" />
+  </ItemGroup>
+
+  <!-- By default resources are generated after XAML is compiled, too late for the temporary project above.
+       PrepareResourceNames comes first: without it the resources would be embedded under an empty name. -->
+  <Target Name="GenerateStringsBeforeXaml" BeforeTargets="MarkupCompilePass1" DependsOnTargets="PrepareResourceNames;ResGen" />
+
+</Project>

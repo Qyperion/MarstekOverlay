@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- The data of each language the tests speak, as the expectations were written against it, so that an update of
+       Windows or ICU cannot change what the app is expected to say. A language and the regional format usual for it
+       share the data. Lists are separated by "|"; a list of months has a thirteenth, empty name. -->
+
+  <data name="en.MonthNames" xml:space="preserve"><value>January|February|March|April|May|June|July|August|September|October|November|December|</value></data>
+  <data name="en.MonthGenitiveNames" xml:space="preserve"><value>January|February|March|April|May|June|July|August|September|October|November|December|</value></data>
+  <data name="en.AbbreviatedMonthNames" xml:space="preserve"><value>Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|</value></data>
+  <data name="en.AbbreviatedMonthGenitiveNames" xml:space="preserve"><value>Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|</value></data>
+  <data name="en.DayNames" xml:space="preserve"><value>Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday</value></data>
+  <data name="en.AbbreviatedDayNames" xml:space="preserve"><value>Sun|Mon|Tue|Wed|Thu|Fri|Sat</value></data>
+  <data name="en.ShortestDayNames" xml:space="preserve"><value>S|M|T|W|T|F|S</value></data>
+  <data name="en.FirstDayOfWeek" xml:space="preserve"><value>Sunday</value></data>
+  <data name="en.ShortDatePattern" xml:space="preserve"><value>M/d/yyyy</value></data>
+  <data name="en.DateSeparator" xml:space="preserve"><value>/</value></data>
+  <data name="en.TimeSeparator" xml:space="preserve"><value>:</value></data>
+  <data name="en.ListSeparator" xml:space="preserve"><value>,</value></data>
+  <data name="en.DecimalSeparator" xml:space="preserve"><value>.</value></data>
+  <data name="en.GroupSeparator" xml:space="preserve"><value>,</value></data>
+  <data name="en.NegativeSign" xml:space="preserve"><value>-</value></data>
+
+  <data name="uk.MonthNames" xml:space="preserve"><value>січень|лютий|березень|квітень|травень|червень|липень|серпень|вересень|жовтень|листопад|грудень|</value></data>
+  <data name="uk.MonthGenitiveNames" xml:space="preserve"><value>січня|лютого|березня|квітня|травня|червня|липня|серпня|вересня|жовтня|листопада|грудня|</value></data>
+  <data name="uk.AbbreviatedMonthNames" xml:space="preserve"><value>січ|лют|бер|кві|тра|чер|лип|сер|вер|жов|лис|гру|</value></data>
+  <data name="uk.AbbreviatedMonthGenitiveNames" xml:space="preserve"><value>січ.|лют.|бер.|квіт.|трав.|черв.|лип.|серп.|вер.|жовт.|лист.|груд.|</value></data>
+  <data name="uk.DayNames" xml:space="preserve"><value>неділя|понеділок|вівторок|середа|четвер|пʼятниця|субота</value></data>
+  <data name="uk.AbbreviatedDayNames" xml:space="preserve"><value>нд|пн|вт|ср|чт|пт|сб</value></data>
+  <data name="uk.ShortestDayNames" xml:space="preserve"><value>Н|П|В|С|Ч|П|С</value></data>
+  <data name="uk.FirstDayOfWeek" xml:space="preserve"><value>Monday</value></data>
+  <data name="uk.ShortDatePattern" xml:space="preserve"><value>dd.MM.yyyy</value></data>
+  <data name="uk.DateSeparator" xml:space="preserve"><value>.</value></data>
+  <data name="uk.TimeSeparator" xml:space="preserve"><value>:</value></data>
+  <data name="uk.ListSeparator" xml:space="preserve"><value>;</value></data>
+  <data name="uk.DecimalSeparator" xml:space="preserve"><value>,</value></data>
+  <data name="uk.GroupSeparator" xml:space="preserve"><value>&#160;</value></data>
+  <data name="uk.NegativeSign" xml:space="preserve"><value>-</value></data>
+</root>

@@ -1,0 +1,19 @@
+# Build output. The publish and artifacts folders are anchored to the root: git matches names without regard
+# to case on Windows, and tools/Publish holds a script.
+bin/
+obj/
+/publish/
+/artifacts/
+TestResults/
+*.binlog
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.DotSettings.user
+
+# Local code index
+.codegraph/

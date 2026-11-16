@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Unit_Watts" xml:space="preserve"><value>{0:0} Вт</value></data>
+  <data name="Unit_WattHours" xml:space="preserve"><value>{0:0.#} Вт·год</value></data>
+  <data name="Unit_KilowattHours" xml:space="preserve"><value>{0:0.##} кВт·год</value></data>
+  <data name="Unit_Percent" xml:space="preserve"><value>{0:0.#}%</value></data>
+  <data name="Unit_Celsius" xml:space="preserve"><value>{0:0.#} °C</value></data>
+  <data name="Unit_Volts" xml:space="preserve"><value>{0:0.#} В</value></data>
+  <data name="Unit_Amperes" xml:space="preserve"><value>{0:0.##} А</value></data>
+  <data name="Unit_Dbm" xml:space="preserve"><value>{0:0} дБм</value></data>
+  <data name="Unit_PercentUnknown" xml:space="preserve"><value>—%</value></data>
+
+  <data name="Common_Yes" xml:space="preserve"><value>так</value></data>
+  <data name="Common_No" xml:space="preserve"><value>ні</value></data>
+  <data name="Common_Labelled" xml:space="preserve"><value>{0}: {1}</value></data>
+  <data name="Common_NoValue" xml:space="preserve"><value>—</value></data>
+  <data name="Common_ListSeparator" xml:space="preserve"><value>, </value></data>
+  <data name="Report_CalculatedIfOnBattery" xml:space="preserve"><value>{0} (розрахунок; правильно, лише якщо станція працює від батареї)</value></data>
+
+  <data name="Overlay_Refresh" xml:space="preserve"><value>Оновити зараз</value></data>
+  <data name="Overlay_AlwaysOnTop" xml:space="preserve"><value>Поверх усіх вікон</value></data>
+  <data name="Overlay_Details" xml:space="preserve"><value>Деталі…</value></data>
+  <data name="Overlay_Settings" xml:space="preserve"><value>Налаштування…</value></data>
+  <data name="Overlay_DetailsTooltip" xml:space="preserve"><value>Деталі</value></data>
+  <data name="Overlay_SettingsTooltip" xml:space="preserve"><value>Налаштування</value></data>
+  <data name="Overlay_HideTooltip" xml:space="preserve"><value>Приховати панель</value></data>
+  <data name="Overlay_Compact" xml:space="preserve"><value>Компактний вигляд</value></data>
+  <data name="Overlay_ClickThrough" xml:space="preserve"><value>Пропускати кліки миші</value></data>
+  <data name="Overlay_Exit" xml:space="preserve"><value>Вийти</value></data>
+  <data name="Overlay_WaitingForData" xml:space="preserve"><value>Очікування даних</value></data>
+  <data name="Overlay_WaitingForFirstAnswer" xml:space="preserve"><value>Очікування першої відповіді</value></data>
+  <data name="Overlay_NoDataYet" xml:space="preserve"><value>Даних ще немає, повторюємо запит</value></data>
+  <data name="Overlay_SettingsRequired" xml:space="preserve"><value>Потрібні налаштування</value></data>
+  <data name="Overlay_NoFreshData" xml:space="preserve"><value>Немає свіжих даних</value></data>
+  <data name="Overlay_Charging" xml:space="preserve"><value>Заряджання</value></data>
+  <data name="Overlay_Discharging" xml:space="preserve"><value>Розряд</value></data>
+  <data name="Overlay_Idle" xml:space="preserve"><value>Очікування</value></data>
+  <data name="Overlay_NoData" xml:space="preserve"><value>Немає даних</value></data>
+  <data name="Overlay_OnBattery" xml:space="preserve"><value>Від батареї · {0}</value></data>
+  <data name="Overlay_OnMains" xml:space="preserve"><value>Від мережі</value></data>
+  <data name="Overlay_OnMainsCharging" xml:space="preserve"><value>Від мережі · заряджання</value></data>
+  <data name="Supply_BatterySince" xml:space="preserve"><value>Перехід на батарею: {0}.</value></data>
+  <data name="Supply_MainsSince" xml:space="preserve"><value>Перехід на мережу: {0}.</value></data>
+  <data name="Supply_SwitchUnseen" xml:space="preserve"><value>Застосунок не бачив, коли це почалося, тож насправді могло бути довше.</value></data>
+  <data name="Duration_HoursMinutes" xml:space="preserve"><value>{0} год {1:00} хв</value></data>
+  <data name="Duration_Minutes" xml:space="preserve"><value>{0} хв</value></data>
+  <data name="Duration_UnderMinute" xml:space="preserve"><value>менше хвилини</value></data>
+  <data name="Duration_AtLeast" xml:space="preserve"><value>щонайменше {0}</value></data>
+  <data name="Duration_Seconds" xml:space="preserve"><value>{0} с</value></data>
+  <data name="Age_JustNow" xml:space="preserve"><value>щойно</value></data>
+  <data name="Age_Ago" xml:space="preserve"><value>{0} тому</value></data>
+  <data name="Moment_Yesterday" xml:space="preserve"><value>вчора {0}</value></data>
+  <data name="Moment_OnDate" xml:space="preserve"><value>{0} {1}</value></data>
+  <data name="Common_AnsweredAt" xml:space="preserve"><value>Остання відповідь: {0}.</value></data>
+  <data name="Overlay_Stale" xml:space="preserve"><value>Дані від {0} застаріли</value></data>
+  <data name="Overlay_Battery" xml:space="preserve"><value>Батарея</value></data>
+  <data name="Overlay_Grid" xml:space="preserve"><value>Мережа</value></data>
+  <data name="Overlay_BackupOutput" xml:space="preserve"><value>Вихід BACKUP</value></data>
+  <data name="Overlay_Solar" xml:space="preserve"><value>Сонячні панелі</value></data>
+  <data name="Overlay_StoredEnergy" xml:space="preserve"><value>Залишок енергії</value></data>
+  <data name="Overlay_BatteryTemperature" xml:space="preserve"><value>Температура батареї</value></data>
+  <data name="Overlay_WifiSignal" xml:space="preserve"><value>Сигнал Wi-Fi</value></data>
+  <data name="Overlay_OperatingMode" xml:space="preserve"><value>Режим</value></data>
+  <data name="Overlay_CurrentOutage" xml:space="preserve"><value>Відключення</value></data>
+  <data name="Overlay_LatestOutage" xml:space="preserve"><value>Останнє відключення</value></data>
+  <data name="Outage_NotNow" xml:space="preserve"><value>зараз немає</value></data>
+  <data name="Outage_NoneRecorded" xml:space="preserve"><value>ще не було</value></data>
+  <data name="Outage_Summary" xml:space="preserve"><value>{0} · {1}</value></data>
+  <data name="Outage_LatestSummary" xml:space="preserve"><value>{0} · {1} · {2}</value></data>
+  <data name="Outage_Period" xml:space="preserve"><value>Від {0} до {1}.</value></data>
+  <data name="Outage_Charge" xml:space="preserve"><value>Заряд {0}.</value></data>
+  <data name="Outage_StartUnseen" xml:space="preserve"><value>Почалося раніше, ніж застосунок це побачив.</value></data>
+  <data name="Outage_EndUnseen" xml:space="preserve"><value>Застосунок не бачив завершення — лише коли воно ще тривало.</value></data>
+  <data name="Overlay_ValueMissing" xml:space="preserve"><value>немає даних</value></data>
+  <data name="Overlay_ValueUnavailable" xml:space="preserve"><value>недоступно</value></data>
+  <data name="Forecast_NotEnoughData" xml:space="preserve"><value>Прогноз: недостатньо даних</value></data>
+  <data name="Forecast_Collecting" xml:space="preserve"><value>Прогноз: збираємо дані</value></data>
+  <data name="Forecast_LoadTooLow" xml:space="preserve"><value>Прогноз: замале навантаження</value></data>
+  <data name="Forecast_ReserveReached" xml:space="preserve"><value>Досягнуто резерву {0}</value></data>
+  <data name="Forecast_Remaining" xml:space="preserve"><value>≈ {0} · до {1}</value></data>
+  <data name="Forecast_ChargeRemaining" xml:space="preserve"><value>Зарядиться за ≈ {0} · до {1}</value></data>
+  <data name="Forecast_Standby" xml:space="preserve"><value>Вистачить на ≈ {0}</value></data>
+  <data name="Forecast_LessThan" xml:space="preserve"><value>Менше ніж {0} хв до {1}</value></data>
+  <data name="Forecast_MoreThan" xml:space="preserve"><value>Понад {0} дн. до {1}</value></data>
+  <data name="Forecast_Tomorrow" xml:space="preserve"><value>{0} завтра</value></data>
+  <data name="Forecast_OnDay" xml:space="preserve"><value>{0} {1}</value></data>
+  <data name="Forecast_Hint" xml:space="preserve"><value>Час, за який заряд знизиться до резерву {2}: за навантаження, усередненого за останні {0} хв, і якщо до виходів доходить {1} того, що віддає батарея. Це оцінка, а не гарантія.</value></data>
+  <data name="Forecast_ChargeHint" xml:space="preserve"><value>Час до повного заряду: за потужності заряджання, усередненої за останні {0} хв, і якщо до батареї доходить {1} цієї потужності. Ближче до 100% заряджання сповільнюється, тож може тривати довше.</value></data>
+  <data name="Forecast_StandbyHint" xml:space="preserve"><value>На скільки вистачить батареї до резерву {2}, якщо мережа зникне зараз: за навантаження на виході BACKUP, усередненого за останні {0} хв, і якщо до виходів доходить {1} того, що віддає батарея. Це оцінка, а не гарантія.</value></data>
+
+  <data name="Compact_Remaining" xml:space="preserve"><value>≈ {0}</value></data>
+  <data name="Compact_ChargeRemaining" xml:space="preserve"><value>зарядиться за ≈ {0}</value></data>
+  <data name="Compact_LessThan" xml:space="preserve"><value>&lt; {0} хв</value></data>
+  <data name="Compact_MoreThan" xml:space="preserve"><value>> {0} дн.</value></data>
+
+  <data name="Chart_Hours" xml:space="preserve"><value>{0:0} год</value></data>
+  <data name="Chart_Days" xml:space="preserve"><value>{0:0} дн.</value></data>
+  <data name="Chart_Summary" xml:space="preserve"><value>Навантаження на виході BACKUP за {0}: мін. {1} · середнє {2} · макс. {3}.</value></data>
+  <data name="Chart_Legend" xml:space="preserve"><value>Верхня смуга — навантаження, повна висота — {0}; нижня — заряд, від {1} до {2}. Час роботи від батареї виділено фоном.</value></data>
+  <data name="Chart_NoSamples" xml:space="preserve"><value>За {0} замірів ще немає.</value></data>
+
+  <data name="Alert_LowChargeRow" xml:space="preserve"><value>Низький заряд (поріг {0})</value></data>
+  <data name="Alert_CriticalChargeRow" xml:space="preserve"><value>Критично низький заряд (поріг {0})</value></data>
+  <data name="Alert_TooHotRow" xml:space="preserve"><value>Батарея перегріта: {0} (межа {1})</value></data>
+  <data name="Alert_TooColdRow" xml:space="preserve"><value>Батарея переохолоджена: {0} (межа {1})</value></data>
+  <data name="Alert_DischargingForbiddenRow" xml:space="preserve"><value>Станція заборонила розряд</value></data>
+  <data name="Alert_ChargingForbiddenRow" xml:space="preserve"><value>Станція заборонила заряджання</value></data>
+
+  <data name="Alert_MainsLostTitle" xml:space="preserve"><value>Мережа зникла</value></data>
+  <data name="Alert_MainsLostText" xml:space="preserve"><value>Станція працює від батареї.</value></data>
+  <data name="Alert_OnBatteryTitle" xml:space="preserve"><value>Станція працює від батареї</value></data>
+  <data name="Alert_OnBatteryText" xml:space="preserve"><value>Відключення почалося, коли застосунок не стежив за станцією.</value></data>
+  <data name="Alert_MainsRestoredTitle" xml:space="preserve"><value>Мережа повернулася</value></data>
+  <data name="Alert_MainsRestoredText" xml:space="preserve"><value>Відключення тривало {0}, спожито {1}.</value></data>
+  <data name="Alert_MainsRestoredTextNoOutage" xml:space="preserve"><value>Станція знову працює від мережі.</value></data>
+  <data name="Alert_ChargeNow" xml:space="preserve"><value>Заряд: {0}.</value></data>
+  <data name="Alert_LowChargeTitle" xml:space="preserve"><value>Низький заряд батареї</value></data>
+  <data name="Alert_CriticalChargeTitle" xml:space="preserve"><value>Критично низький заряд батареї</value></data>
+  <data name="Alert_LowChargeText" xml:space="preserve"><value>Заряд знизився до {0}, поріг — {1}.</value></data>
+  <data name="Alert_TemperatureTitle" xml:space="preserve"><value>Температура батареї поза межами</value></data>
+  <data name="Alert_TooHotText" xml:space="preserve"><value>Батарея нагрілася до {0}, межа — {1}.</value></data>
+  <data name="Alert_TooColdText" xml:space="preserve"><value>Батарея охолола до {0}, межа — {1}.</value></data>
+  <data name="Alert_DischargingForbiddenTitle" xml:space="preserve"><value>Розряд заборонено</value></data>
+  <data name="Alert_DischargingForbiddenText" xml:space="preserve"><value>Станція повідомляє, що батареї заборонено розряджатися.</value></data>
+  <data name="Alert_ChargingForbiddenTitle" xml:space="preserve"><value>Заряджання заборонено</value></data>
+  <data name="Alert_ChargingForbiddenText" xml:space="preserve"><value>Станція повідомляє, що батареї заборонено заряджатися.</value></data>
+  <data name="Alert_StaleTitle" xml:space="preserve"><value>Станція не відповідає</value></data>
+  <data name="Alert_StaleText" xml:space="preserve"><value>Остання відповідь: {0}.</value></data>
+  <data name="Alert_StaleTextNoAnswer" xml:space="preserve"><value>Жодної відповіді ще не було.</value></data>
+  <data name="Common_ProductName" xml:space="preserve"><value>Marstek Overlay</value></data>
+  <data name="Alert_TestText" xml:space="preserve"><value>Так виглядає сповіщення.</value></data>
+
+  <data name="AlertKind_MainsLost" xml:space="preserve"><value>Мережа зникла</value></data>
+  <data name="AlertKind_MainsRestored" xml:space="preserve"><value>Мережа повернулася</value></data>
+  <data name="AlertKind_LowCharge" xml:space="preserve"><value>Заряд знизився до порога</value></data>
+  <data name="AlertKind_BatteryTemperature" xml:space="preserve"><value>Температура батареї поза межами</value></data>
+  <data name="AlertKind_FlowForbidden" xml:space="preserve"><value>Заборонено заряджання або розряд</value></data>
+  <data name="AlertKind_StaleData" xml:space="preserve"><value>Станція не відповідає</value></data>
+
+  <data name="Row_Forecast" xml:space="preserve"><value>Прогноз часу роботи</value></data>
+  <data name="Row_Battery" xml:space="preserve"><value>Потужність батареї</value></data>
+  <data name="Row_StoredEnergy" xml:space="preserve"><value>Залишок енергії</value></data>
+  <data name="Row_CurrentOutage" xml:space="preserve"><value>Поточне відключення</value></data>
+  <data name="Row_LatestOutage" xml:space="preserve"><value>Останнє відключення</value></data>
+  <data name="Row_Grid" xml:space="preserve"><value>Потужність мережі</value></data>
+  <data name="Row_BackupOutput" xml:space="preserve"><value>Потужність виходу BACKUP</value></data>
+  <data name="Row_Solar" xml:space="preserve"><value>Потужність сонячних панелей</value></data>
+  <data name="Row_BatteryTemperature" xml:space="preserve"><value>Температура батареї</value></data>
+  <data name="Row_WifiSignal" xml:space="preserve"><value>Сигнал Wi-Fi</value></data>
+  <data name="Row_OperatingMode" xml:space="preserve"><value>Режим роботи</value></data>
+
+  <data name="Tray_ShowPanel" xml:space="preserve"><value>Показати панель</value></data>
+  <data name="Tray_HidePanel" xml:space="preserve"><value>Приховати панель</value></data>
+
+  <data name="Failure_Text" xml:space="preserve"><value>Marstek Overlay натрапив на помилку, після якої не може працювати далі, і буде закритий.</value></data>
+  <data name="Failure_Log" xml:space="preserve"><value>Подробиці — в журналі: {0}</value></data>
+
+  <data name="Failure_NoAccess" xml:space="preserve"><value>немає доступу</value></data>
+  <data name="Failure_FileUnavailable" xml:space="preserve"><value>файл зайнятий іншою програмою або недоступний</value></data>
+  <data name="Failure_Unexpected" xml:space="preserve"><value>сталася непередбачена помилка</value></data>
+
+  <data name="Settings_Title" xml:space="preserve"><value>Marstek Overlay — налаштування</value></data>
+  <data name="Settings_Station" xml:space="preserve"><value>Станція</value></data>
+  <data name="Settings_IpAddress" xml:space="preserve"><value>IP-адреса</value></data>
+  <data name="Settings_UdpPort" xml:space="preserve"><value>UDP-порт</value></data>
+  <data name="Settings_FindStations" xml:space="preserve"><value>Знайти станції в мережі</value></data>
+  <data name="Settings_TestConnection" xml:space="preserve"><value>Перевірити підключення</value></data>
+  <data name="Settings_Panel" xml:space="preserve"><value>Панель</value></data>
+  <data name="Settings_Appearance" xml:space="preserve"><value>Вигляд</value></data>
+  <data name="Settings_CompactHint" xml:space="preserve"><value>Один рядок замість картки: заряд, навантаження й прогноз.</value></data>
+  <data name="Settings_Behaviour" xml:space="preserve"><value>Поведінка</value></data>
+  <data name="Settings_General" xml:space="preserve"><value>Загальні</value></data>
+  <data name="Settings_Application" xml:space="preserve"><value>Застосунок</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Мова</value></data>
+  <data name="Settings_Autostart" xml:space="preserve"><value>Запускати разом із Windows</value></data>
+  <data name="Settings_AutostartFailed" xml:space="preserve"><value>Не вдалося змінити запис автозапуску в реєстрі: {0}.</value></data>
+  <data name="Settings_BackgroundOpacity" xml:space="preserve"><value>Непрозорість фону</value></data>
+  <data name="Settings_PanelScale" xml:space="preserve"><value>Масштаб панелі</value></data>
+  <data name="Settings_ClickThroughHint" xml:space="preserve"><value>Панель перестає реагувати на мишу, а кліки потрапляють у вікно під нею. Повернути як було можна зі значка в області сповіщень.</value></data>
+  <data name="Settings_HiddenAtStartup" xml:space="preserve"><value>Запускати з прихованою панеллю</value></data>
+  <data name="Settings_HiddenAtStartupHint" xml:space="preserve"><value>Після запуску є лише значок в області сповіщень; панель відкриває пункт «Показати панель» у його меню.</value></data>
+  <data name="Settings_ShownRows" xml:space="preserve"><value>Показувати на панелі</value></data>
+  <data name="Settings_LoadChart" xml:space="preserve"><value>Графік навантаження й заряду</value></data>
+  <data name="Settings_ChartPeriod" xml:space="preserve"><value>Період</value></data>
+  <data name="Settings_Forecast" xml:space="preserve"><value>Прогноз часу роботи</value></data>
+  <data name="Settings_ReserveLevel" xml:space="preserve"><value>Резерв заряду, %</value></data>
+  <data name="Settings_DischargeEfficiency" xml:space="preserve"><value>ККД розряду, %</value></data>
+  <data name="Settings_ChargeEfficiency" xml:space="preserve"><value>ККД заряджання, %</value></data>
+  <data name="Settings_ForecastHint" xml:space="preserve"><value>Прогноз рахує час до рівня резерву. ККД розряду — яка частка того, що віддає батарея, доходить до виходів; ККД заряджання — яка частка того, що споживає станція, потрапляє в батарею. Жодне з цих значень нічого не змінює на станції.</value></data>
+  <data name="Settings_Alerts" xml:space="preserve"><value>Сповіщення</value></data>
+  <data name="Settings_AlertKinds" xml:space="preserve"><value>Сповіщати про</value></data>
+  <data name="Settings_AlertsNote" xml:space="preserve"><value>Windows показує сповіщення, коли стається щось із позначеного. Низький заряд, температура поза межами й заборона, поки тривають, лишаються ще й попередженням на панелі.</value></data>
+  <data name="Settings_AlertLimits" xml:space="preserve"><value>Межі</value></data>
+  <data name="Settings_ChargeThresholds" xml:space="preserve"><value>Пороги заряду, %</value></data>
+  <data name="Settings_ChargeThresholdsHint" xml:space="preserve"><value>Одне сповіщення щоразу, коли заряд знижується до порога; найнижчий поріг — критичний. Смуга заряду жовта від найвищого порога й червона від найнижчого. Пороги розділяйте пробілом або крапкою з комою: кома — десяткова.</value></data>
+  <data name="Settings_BatteryTemperatureFrom" xml:space="preserve"><value>Температура батареї, °C: від</value></data>
+  <data name="Settings_BatteryTemperatureTo" xml:space="preserve"><value>до</value></data>
+  <data name="Settings_StaleAfter" xml:space="preserve"><value>Немає відповіді довше ніж, хв</value></data>
+  <data name="Settings_StaleAfterInEffect" xml:space="preserve"><value>Діє {0:0.#} хв: щонайменше два інтервали опитування.</value></data>
+  <data name="Settings_TestNotification" xml:space="preserve"><value>Показати пробне сповіщення</value></data>
+  <data name="Settings_InvalidChargeThresholds" xml:space="preserve"><value>Пороги заряду мають бути числами від {0} до {1} через пробіл або крапку з комою.</value></data>
+  <data name="Settings_InvalidTemperatureLimits" xml:space="preserve"><value>Межі температури батареї мають бути в діапазоні від {0} до {1} °C, нижня — менша за верхню.</value></data>
+  <data name="Settings_InvalidStaleAfter" xml:space="preserve"><value>Час без відповіді має бути від {0} до {1} хв.</value></data>
+  <data name="Settings_Save" xml:space="preserve"><value>Зберегти</value></data>
+  <data name="Settings_Close" xml:space="preserve"><value>Закрити</value></data>
+  <data name="Settings_Version" xml:space="preserve"><value>Версія</value></data>
+  <data name="Settings_ReadOnlyNote" xml:space="preserve"><value>Застосунок лише читає дані станції й ніколи не змінює її роботу.</value></data>
+  <data name="Settings_AddressFilledIn" xml:space="preserve"><value>Адресу {0} підставлено. Перевірте підключення й збережіть.</value></data>
+  <data name="Settings_Searching" xml:space="preserve"><value>Шукаємо станції на UDP-порту {0}…</value></data>
+  <data name="Settings_NoStationFound" xml:space="preserve"><value>Жодна станція не відповіла. Комп'ютер і станція мають бути в одній мережі, а в застосунку Marstek має бути ввімкнено Local API саме на цьому порту.</value></data>
+  <data name="Settings_StationsFound" xml:space="preserve"><value>Знайдено станцій: {0}. Виберіть станцію, щоб підставити її адресу.</value></data>
+  <data name="Settings_Reading" xml:space="preserve"><value>Читаємо все, що повідомляє {0}, по одному запиту на секунду…</value></data>
+  <data name="Settings_Answered" xml:space="preserve"><value>{0} відповіла. Усе, що вона повідомляє, наведено нижче.</value></data>
+  <data name="Settings_NoAnswer" xml:space="preserve"><value>{0} не відповіла. Перевірте адресу, порт і те, що в застосунку Marstek увімкнено Local API. Подробиці: {1}</value></data>
+  <data name="Settings_NoAnswerWithoutLog" xml:space="preserve"><value>{0} не відповіла. Перевірте адресу, порт і те, що в застосунку Marstek увімкнено Local API.</value></data>
+  <data name="Settings_SearchFailed" xml:space="preserve"><value>Пошук не вдався. Подробиці: {0}</value></data>
+  <data name="Settings_FoundStation" xml:space="preserve"><value>{0} — {1}, v{2}</value></data>
+  <data name="Settings_FoundStationWithoutVersion" xml:space="preserve"><value>{0} — {1}</value></data>
+  <data name="Settings_MinBatteryTemperature" xml:space="preserve"><value>Найнижча температура батареї, °C</value></data>
+  <data name="Settings_MaxBatteryTemperature" xml:space="preserve"><value>Найвища температура батареї, °C</value></data>
+  <data name="Settings_InvalidPort" xml:space="preserve"><value>Порт має бути числом від 1 до 65535.</value></data>
+  <data name="Settings_InvalidAddress" xml:space="preserve"><value>Адреса станції має бути IPv4-адресою, наприклад 192.168.1.50.</value></data>
+  <data name="Settings_InvalidReserve" xml:space="preserve"><value>Резерв заряду має бути від {0} до {1}%.</value></data>
+  <data name="Settings_InvalidEfficiency" xml:space="preserve"><value>ККД має бути від {0} до {1}%.</value></data>
+  <data name="Settings_FixMarked" xml:space="preserve"><value>Значення, позначені червоним, треба виправити.</value></data>
+  <data name="Settings_UnsavedChanges" xml:space="preserve"><value>Адресу чи числа змінено, але не збережено. Натисніть «Закрити» ще раз, щоб відкинути зміни, або «Зберегти», щоб лишити їх.</value></data>
+
+  <data name="StoredData_Title" xml:space="preserve"><value>Видалення збережених даних</value></data>
+  <data name="StoredData_Samples" xml:space="preserve"><value>Заміри для графіків</value></data>
+  <data name="StoredData_Outages" xml:space="preserve"><value>Журнал відключень</value></data>
+  <data name="StoredData_Log" xml:space="preserve"><value>Журнал роботи застосунку (лог)</value></data>
+  <data name="StoredData_Keep" xml:space="preserve"><value>Залишити</value></data>
+  <data name="KeptPeriod_Nothing" xml:space="preserve"><value>нічого</value></data>
+  <data name="KeptPeriod_Day" xml:space="preserve"><value>останню добу</value></data>
+  <data name="KeptPeriod_Week" xml:space="preserve"><value>останній тиждень</value></data>
+  <data name="KeptPeriod_Month" xml:space="preserve"><value>останній місяць</value></data>
+  <data name="StoredData_Delete" xml:space="preserve"><value>Видалити…</value></data>
+  <data name="StoredData_Hint" xml:space="preserve"><value>Видаляє позначене, крім вибраного періоду: 24 години, 7 або 30 діб назад від цієї миті. Видалене не відновити. Відключення, яке ще триває, лишається в журналі.</value></data>
+  <data name="StoredData_ConfirmAll" xml:space="preserve"><value>Видалити все це повністю?</value></data>
+  <data name="StoredData_ConfirmKeeping" xml:space="preserve"><value>Видалити це, залишивши {0}?</value></data>
+  <data name="StoredData_CannotBeRestored" xml:space="preserve"><value>Відновити видалене буде неможливо.</value></data>
+  <data name="StoredData_SamplesDeleted" xml:space="preserve"><value>Видалено замірів: {0:N0}.</value></data>
+  <data name="StoredData_OutagesDeleted" xml:space="preserve"><value>Видалено відключень: {0:N0}.</value></data>
+  <data name="StoredData_LogCleared" xml:space="preserve"><value>Журнал роботи очищено.</value></data>
+  <data name="StoredData_LogFailed" xml:space="preserve"><value>Журнал роботи не очищено: {0}.</value></data>
+  <data name="StoredData_LogPartlyCleared" xml:space="preserve"><value>Журнал роботи очищено лише частково: {0}.</value></data>
+
+  <data name="Details_Title" xml:space="preserve"><value>Marstek Overlay — деталі</value></data>
+  <data name="Details_Outages" xml:space="preserve"><value>Відключення</value></data>
+  <data name="Details_Charts" xml:space="preserve"><value>Графіки</value></data>
+  <data name="Details_LoadAxis" xml:space="preserve"><value>Навантаження на виході BACKUP, Вт</value></data>
+  <data name="Details_ChargeAxis" xml:space="preserve"><value>Заряд, %</value></data>
+  <data name="Details_BatteryAxis" xml:space="preserve"><value>Потужність батареї, Вт: заряджання — вище нуля, розряд — нижче</value></data>
+  <data name="Details_ChartMoment" xml:space="preserve"><value>{0}: {1}</value></data>
+  <data name="Details_ChartLoad" xml:space="preserve"><value>навантаження {0}</value></data>
+  <data name="Details_ChartLoadWithMax" xml:space="preserve"><value>навантаження {0} (макс. {1})</value></data>
+  <data name="Details_ChartCharge" xml:space="preserve"><value>заряд {0}</value></data>
+  <data name="Battery_Charging" xml:space="preserve"><value>заряджання {0}</value></data>
+  <data name="Battery_Discharging" xml:space="preserve"><value>розряд {0}</value></data>
+  <data name="Details_ChartBatteryIdle" xml:space="preserve"><value>батарея {0}</value></data>
+  <data name="Details_ChartOnBattery" xml:space="preserve"><value>від батареї</value></data>
+  <data name="Details_ChartLegend" xml:space="preserve"><value>Розрив лінії — час без замірів. Наведіть курсор на графік, щоб побачити значення в цей момент.</value></data>
+  <data name="Details_LegendLoad" xml:space="preserve"><value>Навантаження, розряд батареї</value></data>
+  <data name="Details_LegendCharge" xml:space="preserve"><value>Заряд, заряджання батареї</value></data>
+  <data name="Details_LegendLoadRange" xml:space="preserve"><value>Від найменшого до найбільшого заміру в точці</value></data>
+  <data name="Details_LegendOnBattery" xml:space="preserve"><value>Робота від батареї</value></data>
+  <data name="Details_CardStale" xml:space="preserve"><value>Станція перестала відповідати на цей запит.</value></data>
+  <data name="Details_PowerGroup" xml:space="preserve"><value>Живлення</value></data>
+  <data name="Details_DeviceGroup" xml:space="preserve"><value>Пристрій і зв'язок</value></data>
+  <data name="Details_AccessoriesGroup" xml:space="preserve"><value>Додаткове обладнання</value></data>
+  <data name="Details_AccessoriesHint" xml:space="preserve"><value>Перевіряється під час запуску застосунку. Якщо CT чи сонячних входів немає, станцію про них більше не опитують, доки ви не перевірите знову.</value></data>
+  <data name="Details_CheckAccessories" xml:space="preserve"><value>Перевірити знову</value></data>
+  <data name="Journal_Today" xml:space="preserve"><value>Сьогодні</value></data>
+  <data name="Journal_ThisWeek" xml:space="preserve"><value>Цього тижня</value></data>
+  <data name="Journal_ThisMonth" xml:space="preserve"><value>Цього місяця</value></data>
+  <data name="Journal_None" xml:space="preserve"><value>не було</value></data>
+  <data name="Journal_Count" xml:space="preserve"><value>Відключень: {0}</value></data>
+  <data name="Journal_Note" xml:space="preserve"><value>Підсумки рахуються від півночі, від першого дня тижня й від першого числа місяця. Відключення, що перейшло через початок періоду, входить у нього лише тією частиною, що припала на період, і з енергією цієї частини за записаними замірами навантаження, а де їх немає — пропорційно часу.</value></data>
+  <data name="Journal_MonthTotal" xml:space="preserve"><value>Разом за місяць</value></data>
+  <data name="Journal_Empty" xml:space="preserve"><value>За цей місяць жодного відключення не записано.</value></data>
+  <data name="Journal_PreviousMonth" xml:space="preserve"><value>Попередній місяць</value></data>
+  <data name="Journal_NextMonth" xml:space="preserve"><value>Наступний місяць</value></data>
+  <data name="Journal_Export" xml:space="preserve"><value>Експорт у CSV…</value></data>
+  <data name="Journal_ExportHint" xml:space="preserve"><value>Зберігає відключення показаного місяця у файл для Excel.</value></data>
+  <data name="Journal_ExportFilter" xml:space="preserve"><value>Файли CSV (*.csv)|*.csv</value></data>
+  <data name="Journal_Exported" xml:space="preserve"><value>Збережено в {0}.</value></data>
+  <data name="Journal_ExportFailed" xml:space="preserve"><value>Файл не збережено: {0}.</value></data>
+  <data name="Export_Energy" xml:space="preserve"><value>Енергія, Вт·год</value></data>
+  <data name="Export_StartCharge" xml:space="preserve"><value>Заряд на початку, %</value></data>
+  <data name="Export_EndCharge" xml:space="preserve"><value>Заряд наприкінці, %</value></data>
+  <data name="Export_StartUnseen" xml:space="preserve"><value>Початок не бачили</value></data>
+  <data name="Export_EndUnseen" xml:space="preserve"><value>Кінець не бачили</value></data>
+  <data name="Export_MonthBound" xml:space="preserve"><value>Обрізано межею місяця</value></data>
+  <data name="Export_BeganEarlier" xml:space="preserve"><value>почалося раніше</value></data>
+  <data name="Export_WentOnLater" xml:space="preserve"><value>тривало далі</value></data>
+  <data name="Journal_Started" xml:space="preserve"><value>Початок</value></data>
+  <data name="Journal_Ended" xml:space="preserve"><value>Кінець</value></data>
+  <data name="Journal_Duration" xml:space="preserve"><value>Тривалість</value></data>
+  <data name="Journal_Energy" xml:space="preserve"><value>Енергія</value></data>
+  <data name="Journal_Charge" xml:space="preserve"><value>Заряд</value></data>
+  <data name="Journal_Ongoing" xml:space="preserve"><value>триває</value></data>
+  <data name="Outage_ChargeChange" xml:space="preserve"><value>{0} → {1}</value></data>
+
+  <data name="Report_NotSupported" xml:space="preserve"><value>ця станція не підтримує</value></data>
+  <data name="Report_NoAnswer" xml:space="preserve"><value>немає відповіді</value></data>
+  <data name="Report_Errors" xml:space="preserve"><value>Помилки</value></data>
+  <data name="Report_SectionHeading" xml:space="preserve"><value>{0} ({1})</value></data>
+  <data name="Error_NoAnswer" xml:space="preserve"><value>Станція не відповіла на {0} за {1:0.#} с.</value></data>
+  <data name="Error_Refused" xml:space="preserve"><value>Станція відповіла на {0} помилкою: {1} (код {2}).</value></data>
+  <data name="Report_Device" xml:space="preserve"><value>Пристрій</value></data>
+  <data name="Report_Model" xml:space="preserve"><value>Модель</value></data>
+  <data name="Report_Firmware" xml:space="preserve"><value>Прошивка</value></data>
+  <data name="Report_Family" xml:space="preserve"><value>Сімейство</value></data>
+  <data name="DeviceFamily_Unknown" xml:space="preserve"><value>невідоме</value></data>
+  <data name="DeviceFamily_VenusA" xml:space="preserve"><value>Venus A</value></data>
+  <data name="DeviceFamily_VenusC" xml:space="preserve"><value>Venus C</value></data>
+  <data name="DeviceFamily_VenusD" xml:space="preserve"><value>Venus D</value></data>
+  <data name="DeviceFamily_VenusE" xml:space="preserve"><value>Venus E 3.0</value></data>
+  <data name="DeviceFamily_VenusE2" xml:space="preserve"><value>Venus E 2.0</value></data>
+  <data name="DeviceFamily_VenusEMini" xml:space="preserve"><value>Venus E Mini</value></data>
+  <data name="Report_BluetoothMac" xml:space="preserve"><value>MAC-адреса Bluetooth</value></data>
+  <data name="Report_WifiMac" xml:space="preserve"><value>MAC-адреса Wi-Fi</value></data>
+  <data name="Report_WifiNetwork" xml:space="preserve"><value>Мережа Wi-Fi</value></data>
+  <data name="Report_ReportedIp" xml:space="preserve"><value>Заявлена IP-адреса</value></data>
+  <data name="Report_EnergySystem" xml:space="preserve"><value>Енергосистема</value></data>
+  <data name="Report_StateOfCharge" xml:space="preserve"><value>Рівень заряду</value></data>
+  <data name="Report_BatteryCapacity" xml:space="preserve"><value>Ємність батареї</value></data>
+  <data name="Report_BatteryPower" xml:space="preserve"><value>Потужність батареї</value></data>
+  <data name="Report_SolarPower" xml:space="preserve"><value>Потужність сонячних панелей</value></data>
+  <data name="Report_GridPower" xml:space="preserve"><value>Потужність мережі</value></data>
+  <data name="Report_BackupOutputPower" xml:space="preserve"><value>Потужність виходу BACKUP</value></data>
+  <data name="Report_TotalSolarEnergy" xml:space="preserve"><value>Усього сонячної енергії</value></data>
+  <data name="Report_TotalEnergyToGrid" xml:space="preserve"><value>Усього віддано в мережу</value></data>
+  <data name="Report_TotalEnergyFromGrid" xml:space="preserve"><value>Усього взято з мережі</value></data>
+  <data name="Report_TotalLoadEnergy" xml:space="preserve"><value>Усього спожито навантаженням</value></data>
+  <data name="Report_OperatingMode" xml:space="preserve"><value>Режим роботи</value></data>
+  <data name="Report_Mode" xml:space="preserve"><value>Режим</value></data>
+  <data name="Report_EnergyMeter" xml:space="preserve"><value>Лічильник енергії</value></data>
+  <data name="Report_CtConnected" xml:space="preserve"><value>CT під'єднано</value></data>
+  <data name="Report_CtNotConnected" xml:space="preserve"><value>CT не під'єднано</value></data>
+  <data name="Report_PhaseAPower" xml:space="preserve"><value>Потужність фази A</value></data>
+  <data name="Report_PhaseBPower" xml:space="preserve"><value>Потужність фази B</value></data>
+  <data name="Report_PhaseCPower" xml:space="preserve"><value>Потужність фази C</value></data>
+  <data name="Report_TotalPower" xml:space="preserve"><value>Загальна потужність</value></data>
+  <data name="Report_InputEnergy" xml:space="preserve"><value>Спожита енергія</value></data>
+  <data name="Report_OutputEnergy" xml:space="preserve"><value>Віддана енергія</value></data>
+  <data name="Report_SolarInputs" xml:space="preserve"><value>Сонячні входи</value></data>
+  <data name="Report_SolarInput" xml:space="preserve"><value>Вхід {0}</value></data>
+  <data name="Report_Working" xml:space="preserve"><value>працює</value></data>
+  <data name="Report_Standby" xml:space="preserve"><value>очікування</value></data>
+  <data name="Report_Battery" xml:space="preserve"><value>Батарея</value></data>
+  <data name="Report_Temperature" xml:space="preserve"><value>Температура</value></data>
+  <data name="Report_RemainingCapacity" xml:space="preserve"><value>Залишкова ємність</value></data>
+  <data name="Report_RatedCapacity" xml:space="preserve"><value>Номінальна ємність</value></data>
+  <data name="Report_ChargingAllowed" xml:space="preserve"><value>Заряджання дозволено</value></data>
+  <data name="Report_DischargingAllowed" xml:space="preserve"><value>Розряд дозволено</value></data>
+  <data name="Report_Wifi" xml:space="preserve"><value>Wi-Fi</value></data>
+  <data name="Report_Network" xml:space="preserve"><value>Мережа</value></data>
+  <data name="Report_Signal" xml:space="preserve"><value>Сигнал</value></data>
+  <data name="Signal_Excellent" xml:space="preserve"><value>відмінний</value></data>
+  <data name="Signal_Good" xml:space="preserve"><value>добрий</value></data>
+  <data name="Signal_Fair" xml:space="preserve"><value>задовільний</value></data>
+  <data name="Signal_Weak" xml:space="preserve"><value>слабкий</value></data>
+  <data name="Report_Ip" xml:space="preserve"><value>IP-адреса</value></data>
+  <data name="Report_Gateway" xml:space="preserve"><value>Шлюз</value></data>
+  <data name="Report_SubnetMask" xml:space="preserve"><value>Маска підмережі</value></data>
+  <data name="Report_Dns" xml:space="preserve"><value>DNS</value></data>
+  <data name="Report_Mac" xml:space="preserve"><value>MAC-адреса</value></data>
+  <data name="Report_Bluetooth" xml:space="preserve"><value>Bluetooth</value></data>
+  <data name="Report_State" xml:space="preserve"><value>Стан</value></data>
+  <data name="Report_BluetoothConnected" xml:space="preserve"><value>під'єднано</value></data>
+  <data name="Report_BluetoothDisconnected" xml:space="preserve"><value>не під'єднано</value></data>
+</root>

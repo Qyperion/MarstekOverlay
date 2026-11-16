@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\LocalApi\LocalApi.csproj" />
+    <ProjectReference Include="..\..\src\Monitoring\Monitoring.csproj" />
+    <ProjectReference Include="..\..\src\Storage\Storage.csproj" />
+    <ProjectReference Include="..\..\tools\StationSimulator\StationSimulator.csproj" />
+  </ItemGroup>
+
+</Project>

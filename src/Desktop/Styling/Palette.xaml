@@ -1,0 +1,33 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:styling="clr-namespace:MarstekOverlay.Desktop.Styling">
+
+    <!-- One brush per Presentation.Tone value, looked up by name in TonePalette.BrushOf. -->
+    <SolidColorBrush x:Key="Brush.Primary" Color="#E8EAED"/>
+    <SolidColorBrush x:Key="Brush.Secondary" Color="#9AA3AD"/>
+    <SolidColorBrush x:Key="Brush.Positive" Color="#4CAF50"/>
+    <SolidColorBrush x:Key="Brush.Info" Color="#4FC3F7"/>
+    <SolidColorBrush x:Key="Brush.Warning" Color="#FFB300"/>
+    <SolidColorBrush x:Key="Brush.Critical" Color="#EF5350"/>
+
+    <Color x:Key="Color.Card">#12161D</Color>
+    <SolidColorBrush x:Key="Brush.CardBorder" Color="#33FFFFFF"/>
+    <SolidColorBrush x:Key="Brush.Track" Color="#2EFFFFFF"/>
+
+    <!-- The chart under the charge bar: its lines take Brush.Info and Brush.Positive, the time on the battery
+         a wash of Brush.Warning, the tone of the header while the station runs on it. -->
+    <SolidColorBrush x:Key="Brush.ChartBand" Color="#14FFFFFF"/>
+    <SolidColorBrush x:Key="Brush.ChartLoadFill" Color="#2E4FC3F7"/>
+    <SolidColorBrush x:Key="Brush.ChartLoadRange" Color="#474FC3F7"/>
+    <SolidColorBrush x:Key="Brush.ChartChargeFill" Color="#2E4CAF50"/>
+    <SolidColorBrush x:Key="Brush.ChartOnBattery" Color="#38FFB300"/>
+    <SolidColorBrush x:Key="Brush.ChartGrid" Color="#1FFFFFFF"/>
+
+    <SolidColorBrush x:Key="Brush.Window" Color="#0E1116"/>
+    <SolidColorBrush x:Key="Brush.Field" Color="#1A2028"/>
+    <SolidColorBrush x:Key="Brush.FieldBorder" Color="#2A323C"/>
+    <SolidColorBrush x:Key="Brush.Accent" Color="#1F3A4D"/>
+
+    <styling:ToneToBrushConverter x:Key="ToneToBrush"/>
+
+</ResourceDictionary>

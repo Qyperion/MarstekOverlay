@@ -1,0 +1,9 @@
+<Project>
+
+  <!-- Microsoft.Testing.Platform's telemetry arrives with the test framework and registers itself through this hook.
+       Without it the generated entry point leaves telemetry out, and no environment variable is needed. -->
+  <ItemGroup Condition="$(MSBuildProjectName.EndsWith('Tests'))">
+    <TestingPlatformBuilderHook Remove="98058041-B5B6-4A75-9834-58E6DF796A22" />
+  </ItemGroup>
+
+</Project>

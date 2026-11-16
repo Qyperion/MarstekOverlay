@@ -1,0 +1,25 @@
+<Project>
+
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- The only warnings-as-errors gate in the repo. -->
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>$(WarningsAsErrors);nullable</WarningsAsErrors>
+
+    <!-- The .editorconfig rules are checked by the build. IDE0005 needs the documentation file; its warnings about
+         members without comments and parameters left undocumented are off, since comments here are the exception. -->
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591;CS1573</NoWarn>
+    <PublishDocumentationFile>false</PublishDocumentationFile>
+    <PublishReferencesDocumentationFiles>false</PublishReferencesDocumentationFiles>
+
+    <!-- Conditional because of WPF: XAML is compiled against a temporary copy of the project that has another
+         file name and receives the real names before this file is imported. -->
+    <AssemblyName Condition="'$(AssemblyName)' == ''">MarstekOverlay.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace Condition="'$(RootNamespace)' == ''">MarstekOverlay.$(MSBuildProjectName)</RootNamespace>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,61 @@
+name: Bug report
+description: Something in the app does not work as it should
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The app only reads what the station answers, so a report says most with those answers in it: the diagnostic log has them.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you saw instead.
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      description: At the bottom of the settings window.
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How the app was installed
+      options:
+        - Installer
+        - Portable exe with .NET inside (self-contained)
+        - Portable exe, .NET installed separately
+        - Built from the sources
+    validations:
+      required: true
+  - type: input
+    id: station
+    attributes:
+      label: Station model and firmware
+      description: The Details window, the Station tab, the Device card.
+      placeholder: Venus E 3.0, firmware 150
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+  - type: textarea
+    id: log
+    attributes:
+      label: Diagnostic log
+      description: |
+        The lines of `%APPDATA%\MarstekOverlay\diagnostics.log` around the moment it happened.
+        If the trouble is in what the app shows or in the connection, first start the app with `--LogConfiguration:FileLogMinimumLevel=Debug` on its command line, or set `"FileLogMinimumLevel": "Debug"` in `appsettings.json` next to the exe: the log then holds every request and answer.
+        Such a log names the station's IP and MAC addresses and the Wi-Fi network; blank them out if you would rather not share them.
+      render: text
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else
+      description: Screenshots, or what you have already tried.

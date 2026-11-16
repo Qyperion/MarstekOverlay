@@ -1,0 +1,22 @@
+version: 2
+updates:
+  - package-ecosystem: nuget
+    directories:
+      - /src/*
+      - /tests/*
+      - /tools/StationSimulator
+    schedule:
+      interval: weekly
+    groups:
+      # One pull request for what is safe to take together; a new major version comes on its own.
+      minor-and-patch:
+        update-types: [minor, patch]
+    ignore:
+      # From version 8 on FluentAssertions is under a commercial licence.
+      - dependency-name: FluentAssertions
+        update-types: ['version-update:semver-major']
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

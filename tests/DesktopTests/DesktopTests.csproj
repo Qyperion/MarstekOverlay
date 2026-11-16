@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- The app is built for Windows alone, and only a project for the same platform may reference it. -->
+    <TargetFramework>net11.0-windows</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Desktop\Desktop.csproj" />
+  </ItemGroup>
+
+</Project>

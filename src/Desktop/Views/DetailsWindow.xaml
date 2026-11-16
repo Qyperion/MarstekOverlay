@@ -1,0 +1,352 @@
+﻿<Window x:Class="MarstekOverlay.Desktop.Views.DetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:MarstekOverlay.Desktop.Controls"
+        xmlns:loc="clr-namespace:MarstekOverlay.Desktop.Localization"
+        Title="{loc:Text Details_Title}" Width="940" Height="700" MinWidth="780" MinHeight="460"
+        Background="{StaticResource Brush.Window}" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Styling/WindowStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="Tile" TargetType="Border">
+                <Setter Property="Background" Value="{StaticResource Brush.Field}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource Brush.FieldBorder}"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="Padding" Value="12,9,12,10"/>
+                <Setter Property="Margin" Value="0,0,10,10"/>
+            </Style>
+
+            <!-- Text takes the colour of the selected tab it is on unless told otherwise, and inside a data template
+                 it does not pick up the window's implicit style. -->
+            <Style x:Key="TabPage" TargetType="Grid">
+                <Setter Property="TextElement.Foreground" Value="{StaticResource Brush.Secondary}"/>
+            </Style>
+
+            <!-- A card whose request the station has stopped answering: what it shows is what was said last. -->
+            <Style x:Key="Card.Tile" TargetType="Border" BasedOn="{StaticResource Tile}">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding IsStale}" Value="True">
+                        <Setter Property="BorderBrush" Value="{StaticResource Brush.Warning}"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="Card.Age" TargetType="TextBlock">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding IsStale}" Value="True">
+                        <Setter Property="Foreground" Value="{StaticResource Brush.Warning}"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="Card.Value" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{StaticResource Brush.Primary}"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding DataContext.IsStale, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                 Value="True">
+                        <Setter Property="Foreground" Value="{StaticResource Brush.Secondary}"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+            <!-- The legend under the charts: a sample of a line or of a filled area, then what it stands for. -->
+            <Style x:Key="Legend.Item" TargetType="StackPanel">
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="Margin" Value="0,0,20,2"/>
+            </Style>
+
+            <Style x:Key="Legend.Line" TargetType="Rectangle">
+                <Setter Property="Width" Value="16"/>
+                <Setter Property="Height" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0,1,6,0"/>
+            </Style>
+
+            <Style x:Key="Legend.Area" TargetType="Rectangle">
+                <Setter Property="Width" Value="16"/>
+                <Setter Property="Height" Value="10"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0,1,6,0"/>
+            </Style>
+
+            <Style x:Key="Pager" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                <Setter Property="Padding" Value="11,1,11,3"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+
+            <!-- Cards that belong together, under what they are about. The cards bring the room below them. -->
+            <Style x:Key="Card.Group" TargetType="GroupBox" BasedOn="{StaticResource {x:Type GroupBox}}">
+                <Setter Property="Margin" Value="0,0,0,8"/>
+            </Style>
+
+            <DataTemplate x:Key="Card">
+                <Border Style="{StaticResource Card.Tile}">
+                    <StackPanel>
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Right" Text="{Binding Age}" ToolTip="{Binding AgeHint}" FontSize="11"
+                                       VerticalAlignment="Center" Margin="8,0,0,0" Style="{StaticResource Card.Age}"/>
+                            <TextBlock Text="{Binding Title}" ToolTip="{Binding Method}" FontWeight="SemiBold"
+                                       TextTrimming="CharacterEllipsis" Foreground="{StaticResource Brush.Primary}"/>
+                        </DockPanel>
+
+                        <TextBlock Text="{Binding Note}" FontSize="12" FontStyle="Italic" TextWrapping="Wrap"
+                                   Margin="0,6,0,0" Style="{StaticResource HiddenWhileEmpty}"/>
+
+                        <ItemsControl ItemsSource="{Binding Rows}" Focusable="False" Margin="0,3,0,0">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="0,3,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="{Binding Label}" FontSize="12" TextWrapping="Wrap"/>
+                                        <TextBlock Grid.Column="1" Text="{Binding Value}" FontSize="12" TextWrapping="Wrap"
+                                                   TextAlignment="Right" MaxWidth="150" Margin="10,0,0,0"
+                                                   Style="{StaticResource Card.Value}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+            </DataTemplate>
+
+            <!-- The cards of a group side by side, all as tall as the tallest. The margin on the right takes back
+                 the room the last card keeps to its right. -->
+            <Style x:Key="Card.Row" TargetType="ItemsControl">
+                <Setter Property="Focusable" Value="False"/>
+                <Setter Property="Margin" Value="0,0,-10,0"/>
+                <Setter Property="ItemTemplate" Value="{StaticResource Card}"/>
+                <Setter Property="ItemsPanel">
+                    <Setter.Value>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="3"/>
+                        </ItemsPanelTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <TabControl Margin="16,10,16,14">
+        <TabItem Header="{loc:Text Settings_Station}">
+            <Grid Style="{StaticResource TabPage}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <ScrollViewer Grid.Row="0" Style="{StaticResource ScrollingPage}">
+                    <StackPanel>
+                        <GroupBox Header="{loc:Text Details_PowerGroup}" Style="{StaticResource Card.Group}">
+                            <ItemsControl ItemsSource="{Binding CardGroups[0]}" Style="{StaticResource Card.Row}"/>
+                        </GroupBox>
+
+                        <GroupBox Header="{loc:Text Details_DeviceGroup}" Style="{StaticResource Card.Group}">
+                            <ItemsControl ItemsSource="{Binding CardGroups[1]}" Style="{StaticResource Card.Row}"/>
+                        </GroupBox>
+
+                        <!-- What a station may come without. The room of the third card tells how that is found out. -->
+                        <GroupBox Header="{loc:Text Details_AccessoriesGroup}" Style="{StaticResource Card.Group}">
+                            <UniformGrid Columns="3" Margin="0,0,-10,0">
+                                <ContentControl Content="{Binding CardGroups[2][0]}" ContentTemplate="{StaticResource Card}"
+                                                Focusable="False"/>
+                                <ContentControl Content="{Binding CardGroups[2][1]}" ContentTemplate="{StaticResource Card}"
+                                                Focusable="False"/>
+                                <StackPanel Margin="2,0,10,10">
+                                    <TextBlock Text="{loc:Text Details_AccessoriesHint}" Style="{StaticResource Hint}"/>
+                                    <Button Content="{loc:Text Details_CheckAccessories}" HorizontalAlignment="Left"
+                                            Margin="0,8,0,0" Command="{Binding CheckAccessoriesCommand}"/>
+                                </StackPanel>
+                            </UniformGrid>
+                        </GroupBox>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <TextBlock Grid.Row="1" Text="{Binding Errors}" TextWrapping="Wrap" FontSize="12" Margin="0,6,0,0"
+                           Foreground="{StaticResource Brush.Warning}" Style="{StaticResource HiddenWhileEmpty}"/>
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="{loc:Text Details_Outages}">
+            <Grid Style="{StaticResource TabPage}" DataContext="{Binding Journal}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <ItemsControl Grid.Row="0" ItemsSource="{Binding Totals}" Focusable="False" Margin="0,0,-10,0">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Rows="1"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Style="{StaticResource Tile}">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Title}" FontSize="12"/>
+                                    <TextBlock Text="{Binding Headline}" FontSize="18" FontWeight="SemiBold" Margin="0,2,0,0"
+                                               TextWrapping="Wrap" Foreground="{StaticResource Brush.Primary}"/>
+                                    <TextBlock Text="{Binding Details}" FontSize="12" Margin="0,2,0,0" TextWrapping="Wrap"
+                                               Style="{StaticResource HiddenWhileEmpty}"/>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <TextBlock Grid.Row="1" Text="{loc:Text Journal_Note}" TextWrapping="Wrap" FontSize="12"
+                           HorizontalAlignment="Left" Margin="0,0,0,10"/>
+
+                <!-- The journal a month at a time. The margin on the right, here and below, is the room the list
+                     keeps for its scroll bar. -->
+                <DockPanel Grid.Row="2" Margin="0,0,10,10">
+                    <Button DockPanel.Dock="Left" Content="‹" Style="{StaticResource Pager}"
+                            Command="{Binding ShowPreviousMonthCommand}"
+                            ToolTip="{loc:Text Journal_PreviousMonth}"
+                            AutomationProperties.Name="{loc:Text Journal_PreviousMonth}"/>
+                    <TextBlock DockPanel.Dock="Left" Text="{Binding MonthTitle}" MinWidth="136" TextAlignment="Center"
+                               FontWeight="SemiBold" Margin="8,0" Foreground="{StaticResource Brush.Primary}"/>
+                    <Button DockPanel.Dock="Left" Content="›" Style="{StaticResource Pager}"
+                            Command="{Binding ShowNextMonthCommand}"
+                            ToolTip="{loc:Text Journal_NextMonth}"
+                            AutomationProperties.Name="{loc:Text Journal_NextMonth}"/>
+                    <Button DockPanel.Dock="Right" Content="{loc:Text Journal_Export}" Click="Export_Click"
+                            ToolTip="{loc:Text Journal_ExportHint}">
+                        <Button.Style>
+                            <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Outages.Count}" Value="0">
+                                        <Setter Property="IsEnabled" Value="False"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <TextBlock Text="{Binding ExportStatus}" ToolTip="{Binding ExportStatus}" FontSize="12"
+                               TextTrimming="CharacterEllipsis" Margin="14,0"/>
+                </DockPanel>
+
+                <Border Grid.Row="3" BorderBrush="{StaticResource Brush.FieldBorder}" BorderThickness="0,0,0,1"
+                        Padding="12,0,12,6" Margin="0,0,10,0">
+                    <controls:JournalGrid>
+                        <TextBlock Grid.Column="0" Text="{loc:Text Journal_Started}" FontSize="12"/>
+                        <TextBlock Grid.Column="1" Text="{loc:Text Journal_Ended}" FontSize="12"/>
+                        <TextBlock Grid.Column="2" Text="{loc:Text Journal_Duration}" FontSize="12"/>
+                        <TextBlock Grid.Column="3" Text="{loc:Text Journal_Energy}" FontSize="12"/>
+                        <TextBlock Grid.Column="4" Text="{loc:Text Journal_Charge}" FontSize="12"/>
+                    </controls:JournalGrid>
+                </Border>
+
+                <ScrollViewer Grid.Row="4" Style="{StaticResource ScrollingPage}" VerticalScrollBarVisibility="Visible">
+                    <StackPanel>
+                        <TextBlock Text="{loc:Text Journal_Empty}" FontStyle="Italic" Margin="12,10,0,0">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Outages.Count}" Value="0">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+
+                        <ItemsControl ItemsSource="{Binding Outages}" Focusable="False">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="{StaticResource Brush.Field}" BorderThickness="0,0,0,1"
+                                            Padding="12,6" Background="Transparent" ToolTip="{Binding Hint}">
+                                        <controls:JournalGrid TextElement.Foreground="{StaticResource Brush.Primary}">
+                                            <TextBlock Grid.Column="0" Text="{Binding Started}"/>
+                                            <TextBlock Grid.Column="1" Text="{Binding Ended}">
+                                                <TextBlock.Style>
+                                                    <Style TargetType="TextBlock">
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding IsOngoing}" Value="True">
+                                                                <Setter Property="Foreground"
+                                                                        Value="{StaticResource Brush.Warning}"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBlock.Style>
+                                            </TextBlock>
+                                            <TextBlock Grid.Column="2" Text="{Binding Duration}"/>
+                                            <TextBlock Grid.Column="3" Text="{Binding Energy}"/>
+                                            <TextBlock Grid.Column="4" Text="{Binding Charge}"/>
+                                        </controls:JournalGrid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <TextBlock Grid.Row="5" Text="{Binding MonthTotal}" TextWrapping="Wrap" FontWeight="SemiBold"
+                           Foreground="{StaticResource Brush.Primary}" Margin="12,8,10,0"
+                           Style="{StaticResource HiddenWhileEmpty}"/>
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="{loc:Text Details_Charts}">
+            <Grid Style="{StaticResource TabPage}" DataContext="{Binding Charts}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal">
+                    <TextBlock Text="{loc:Text Settings_ChartPeriod}" Margin="0,0,12,0"/>
+                    <ItemsControl ItemsSource="{Binding Periods}" Style="{StaticResource ChoiceList}" Tag="ChartPeriod"/>
+                </StackPanel>
+
+                <TextBlock Grid.Row="1" Text="{Binding Text}" TextWrapping="Wrap" HorizontalAlignment="Left"
+                           Margin="0,10,0,6" Foreground="{StaticResource Brush.Primary}"/>
+
+                <controls:HistoryChartView Grid.Row="2"
+                                           Chart="{Binding Chart}"
+                                           Pointer="{Binding Pointer, Mode=OneWayToSource}"
+                                           PlotColumns="{Binding Columns, Mode=OneWayToSource}"
+                                           LoadTitle="{loc:Text Details_LoadAxis}"
+                                           ChargeTitle="{loc:Text Details_ChargeAxis}"
+                                           BatteryTitle="{loc:Text Details_BatteryAxis}"
+                                           AutomationProperties.Name="{loc:Text Settings_LoadChart}"/>
+
+                <StackPanel Grid.Row="3" Margin="0,6,0,0">
+                    <WrapPanel>
+                        <StackPanel Style="{StaticResource Legend.Item}">
+                            <Rectangle Style="{StaticResource Legend.Line}" Fill="{StaticResource Brush.Info}"/>
+                            <TextBlock Text="{loc:Text Details_LegendLoad}" FontSize="12"/>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource Legend.Item}">
+                            <Rectangle Style="{StaticResource Legend.Line}" Fill="{StaticResource Brush.Positive}"/>
+                            <TextBlock Text="{loc:Text Details_LegendCharge}" FontSize="12"/>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource Legend.Item}">
+                            <Rectangle Style="{StaticResource Legend.Area}" Fill="{StaticResource Brush.ChartLoadRange}"/>
+                            <TextBlock Text="{loc:Text Details_LegendLoadRange}" FontSize="12"/>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource Legend.Item}">
+                            <Rectangle Style="{StaticResource Legend.Area}" Fill="{StaticResource Brush.ChartOnBattery}"/>
+                            <TextBlock Text="{loc:Text Details_LegendOnBattery}" FontSize="12"/>
+                        </StackPanel>
+                    </WrapPanel>
+                    <TextBlock Text="{loc:Text Details_ChartLegend}" TextWrapping="Wrap" FontSize="12"
+                               HorizontalAlignment="Left" Margin="0,4,0,0"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>

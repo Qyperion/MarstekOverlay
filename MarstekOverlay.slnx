@@ -1,0 +1,40 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="CONTRIBUTING.md" />
+    <File Path="Directory.Build.props" />
+    <File Path="global.json" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+    <File Path="README.uk.md" />
+    <File Path="THIRD-PARTY-NOTICES.md" />
+  </Folder>
+  <Folder Name="/docs/">
+    <File Path="docs/Architecture.md" />
+    <File Path="docs/BuildAndRelease.md" />
+    <File Path="docs/Configuration.md" />
+    <File Path="docs/DesktopUi.md" />
+    <File Path="docs/ForecastAndAlerts.md" />
+    <File Path="docs/HistoryAndCharts.md" />
+    <File Path="docs/MarstekLocalApi.md" />
+    <File Path="docs/PowerSourceAndOutages.md" />
+    <File Path="docs/StationBehaviour.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Desktop/Desktop.csproj" />
+    <Project Path="src/LocalApi/LocalApi.csproj" />
+    <Project Path="src/Monitoring/Monitoring.csproj" />
+    <Project Path="src/Storage/Storage.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <File Path="tests/Directory.Build.props" />
+    <Project Path="tests/DesktopTests/DesktopTests.csproj" />
+    <Project Path="tests/TestSupport/TestSupport.csproj" />
+    <Project Path="tests/UnitTests/UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/StationSimulator/StationSimulator.csproj" />
+  </Folder>
+</Solution>

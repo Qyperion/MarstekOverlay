@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- What the tests expect the app to say in Ukrainian, each under the English text the test itself names. -->
+
+  <!-- Units -->
+  <data name="1.56 kWh" xml:space="preserve"><value>1,56 кВт·год</value></data>
+  <data name="5.07 kWh" xml:space="preserve"><value>5,07 кВт·год</value></data>
+  <data name="5.12 kWh" xml:space="preserve"><value>5,12 кВт·год</value></data>
+  <data name="120 W" xml:space="preserve"><value>120 Вт</value></data>
+  <data name="575 W" xml:space="preserve"><value>575 Вт</value></data>
+  <data name="22.5 °C" xml:space="preserve"><value>22,5 °C</value></data>
+
+  <!-- Durations, ages, moments, periods -->
+  <data name="40 min" xml:space="preserve"><value>40 хв</value></data>
+  <data name="45 min" xml:space="preserve"><value>45 хв</value></data>
+  <data name="2 h 05 min" xml:space="preserve"><value>2 год 05 хв</value></data>
+  <data name="2 h 15 min" xml:space="preserve"><value>2 год 15 хв</value></data>
+  <data name="3 h 05 min" xml:space="preserve"><value>3 год 05 хв</value></data>
+  <data name="at least 40 min" xml:space="preserve"><value>щонайменше 40 хв</value></data>
+  <data name="less than a minute" xml:space="preserve"><value>менше хвилини</value></data>
+  <data name="just now" xml:space="preserve"><value>щойно</value></data>
+  <data name="12 s ago" xml:space="preserve"><value>12 с тому</value></data>
+  <data name="5 min ago" xml:space="preserve"><value>5 хв тому</value></data>
+  <data name="2 h 15 min ago" xml:space="preserve"><value>2 год 15 хв тому</value></data>
+  <data name="yesterday 19:13" xml:space="preserve"><value>вчора 19:13</value></data>
+  <data name="yesterday 21:05" xml:space="preserve"><value>вчора 21:05</value></data>
+  <data name="yesterday 21:28" xml:space="preserve"><value>вчора 21:28</value></data>
+  <data name="9 Nov 17:02" xml:space="preserve"><value>9 лист. 17:02</value></data>
+  <data name="9 Nov" xml:space="preserve"><value>9 лист.</value></data>
+  <data name="31 Dec 2025 23:00" xml:space="preserve"><value>31 груд. 2025 23:00</value></data>
+  <data name="1 Jan 01:00" xml:space="preserve"><value>1 січ. 01:00</value></data>
+  <data name="Month total: 2 h 00 min · Outages: 2 · 700 Wh" xml:space="preserve"><value>Разом за місяць: 2 год 00 хв · Відключень: 2 · 700 Вт·год</value></data>
+  <data name="November 2026" xml:space="preserve"><value>Листопад 2026</value></data>
+  <data name="3 h" xml:space="preserve"><value>3 год</value></data>
+  <data name="7 d" xml:space="preserve"><value>7 дн.</value></data>
+
+  <!-- Panel -->
+  <data name="Settings required" xml:space="preserve"><value>Потрібні налаштування</value></data>
+  <data name="On battery · 2 h 15 min" xml:space="preserve"><value>Від батареї · 2 год 15 хв</value></data>
+  <data name="On battery · at least 40 min" xml:space="preserve"><value>Від батареї · щонайменше 40 хв</value></data>
+  <data name="On mains" xml:space="preserve"><value>Від мережі</value></data>
+  <data name="On mains · charging" xml:space="preserve"><value>Від мережі · заряджання</value></data>
+  <data name="Data from 22:39:46 is stale" xml:space="preserve"><value>Дані від 22:39:46 застаріли</value></data>
+  <data name="No fresh data" xml:space="preserve"><value>Немає свіжих даних</value></data>
+  <data name="No data yet, retrying" xml:space="preserve"><value>Даних ще немає, повторюємо запит</value></data>
+  <data name="Waiting for the first answer" xml:space="preserve"><value>Очікування першої відповіді</value></data>
+  <data name="On mains since yesterday 21:05. Latest answer at 22:42:34." xml:space="preserve"><value>Перехід на мережу: вчора 21:05. Остання відповідь: 22:42:34.</value></data>
+  <data name="On battery since 22:02. The app did not see when that began, so it may have been longer. Latest answer at 22:42:34." xml:space="preserve"><value>Перехід на батарею: 22:02. Застосунок не бачив, коли це почалося, тож насправді могло бути довше. Остання відповідь: 22:42:34.</value></data>
+  <data name="On battery since 20:27. Latest answer at 22:42:34." xml:space="preserve"><value>Перехід на батарею: 20:27. Остання відповідь: 22:42:34.</value></data>
+  <data name="Latest answer at 22:42:34." xml:space="preserve"><value>Остання відповідь: 22:42:34.</value></data>
+  <data name="≈ 9 h 00 min · until 07:40 tomorrow" xml:space="preserve"><value>≈ 9 год 00 хв · до 07:40 завтра</value></data>
+  <data name="Time until the charge drops to the reserve of 12%, at the load averaged over the last 5 minutes and with 90% of what the battery gives up reaching the outputs. Not a guarantee." xml:space="preserve"><value>Час, за який заряд знизиться до резерву 12%: за навантаження, усередненого за останні 5 хв, і якщо до виходів доходить 90% того, що віддає батарея. Це оцінка, а не гарантія.</value></data>
+  <data name="Full in ≈ 0 h 20 min · by 23:00" xml:space="preserve"><value>Зарядиться за ≈ 0 год 20 хв · до 23:00</value></data>
+  <data name="≈ 57 h 00 min · until Sun 07:40" xml:space="preserve"><value>≈ 57 год 00 хв · до нд 07:40</value></data>
+  <data name="Would last ≈ 14 h 30 min" xml:space="preserve"><value>Вистачить на ≈ 14 год 30 хв</value></data>
+  <data name="575 W · ≈ 7 h 10 min" xml:space="preserve"><value>575 Вт · ≈ 7 год 10 хв</value></data>
+  <data name="575 W · full in ≈ 0 h 20 min" xml:space="preserve"><value>575 Вт · зарядиться за ≈ 0 год 20 хв</value></data>
+  <data name="On mains · 100%" xml:space="preserve"><value>Від мережі · 100%</value></data>
+  <data name="Backup output: 575 W" xml:space="preserve"><value>Вихід BACKUP: 575 Вт</value></data>
+  <data name="2 h 15 min · 1.56 kWh" xml:space="preserve"><value>2 год 15 хв · 1,56 кВт·год</value></data>
+  <data name="On battery since 20:27. Charge 99% → 91%." xml:space="preserve"><value>Перехід на батарею: 20:27. Заряд 99% → 91%.</value></data>
+  <data name="yesterday 21:05 · 2 h 15 min · 1.56 kWh" xml:space="preserve"><value>вчора 21:05 · 2 год 15 хв · 1,56 кВт·год</value></data>
+  <data name="From yesterday 21:05 to yesterday 23:20. Charge 100% → 91%." xml:space="preserve"><value>Від вчора 21:05 до вчора 23:20. Заряд 100% → 91%.</value></data>
+  <data name="Load on the backup output over 3 h: min 200 W · average 250 W · max 300 W." xml:space="preserve"><value>Навантаження на виході BACKUP за 3 год: мін. 200 Вт · середнє 250 Вт · макс. 300 Вт.</value></data>
+  <data name="The upper band is the load, 400 W at its full height; the lower one is the charge, from 90% to 100%. Time on the battery is shaded." xml:space="preserve"><value>Верхня смуга — навантаження, повна висота — 400 Вт; нижня — заряд, від 90% до 100%. Час роботи від батареї виділено фоном.</value></data>
+
+  <!-- Warnings and notifications -->
+  <data name="Low charge (threshold 30%)" xml:space="preserve"><value>Низький заряд (поріг 30%)</value></data>
+  <data name="Battery too hot: 47.5 °C (limit 45 °C)" xml:space="preserve"><value>Батарея перегріта: 47,5 °C (межа 45 °C)</value></data>
+  <data name="Mains power lost" xml:space="preserve"><value>Мережа зникла</value></data>
+  <data name="The station is running on the battery. Charge: 89%." xml:space="preserve"><value>Станція працює від батареї. Заряд: 89%.</value></data>
+  <data name="The station is running on the battery" xml:space="preserve"><value>Станція працює від батареї</value></data>
+  <data name="The outage began while the app was not following the station. Charge: 62%." xml:space="preserve"><value>Відключення почалося, коли застосунок не стежив за станцією. Заряд: 62%.</value></data>
+  <data name="Mains power is back" xml:space="preserve"><value>Мережа повернулася</value></data>
+  <data name="The outage lasted 2 h 15 min and took 1.56 kWh. Charge: 91%." xml:space="preserve"><value>Відключення тривало 2 год 15 хв, спожито 1,56 кВт·год. Заряд: 91%.</value></data>
+  <data name="Battery charge is low" xml:space="preserve"><value>Низький заряд батареї</value></data>
+  <data name="The charge is down to 29%; the threshold is 30%." xml:space="preserve"><value>Заряд знизився до 29%, поріг — 30%.</value></data>
+  <data name="The station is not answering" xml:space="preserve"><value>Станція не відповідає</value></data>
+  <data name="Latest answer: yesterday 23:58." xml:space="preserve"><value>Остання відповідь: вчора 23:58.</value></data>
+
+  <!-- Details window: journal and charts -->
+  <data name="ongoing" xml:space="preserve"><value>триває</value></data>
+  <data name="no outages" xml:space="preserve"><value>не було</value></data>
+  <data name="Today" xml:space="preserve"><value>Сьогодні</value></data>
+  <data name="This week" xml:space="preserve"><value>Цього тижня</value></data>
+  <data name="This month" xml:space="preserve"><value>Цього місяця</value></data>
+  <data name="Outages: 1 · 208.2 Wh" xml:space="preserve"><value>Відключень: 1 · 208,2 Вт·год</value></data>
+  <data name="Outages: 2 · 508.2 Wh" xml:space="preserve"><value>Відключень: 2 · 508,2 Вт·год</value></data>
+  <data name="Outages: 3 · 908.2 Wh" xml:space="preserve"><value>Відключень: 3 · 908,2 Вт·год</value></data>
+  <data name="yesterday 19:13: load 227 W · charge 97.1% · discharging 247 W · on battery" xml:space="preserve"><value>вчора 19:13: навантаження 227 Вт · заряд 97,1% · розряд 247 Вт · від батареї</value></data>
+  <data name="yesterday 19:13: load 450 W (max 900 W) · charge 100% · battery 0 W" xml:space="preserve"><value>вчора 19:13: навантаження 450 Вт (макс. 900 Вт) · заряд 100% · батарея 0 Вт</value></data>
+  <data name="yesterday 19:13: load 250 W · charge 80% · charging 2250 W" xml:space="preserve"><value>вчора 19:13: навантаження 250 Вт · заряд 80% · заряджання 2250 Вт</value></data>
+  <data name="Load on the backup output over 24 h: min 200 W · average 250 W · max 300 W." xml:space="preserve"><value>Навантаження на виході BACKUP за 24 год: мін. 200 Вт · середнє 250 Вт · макс. 300 Вт.</value></data>
+
+  <!-- Details window: the journal as a file for Excel, in the regional format of the language -->
+  <data name="Began,Ended,Duration,&quot;Energy, Wh&quot;,&quot;Charge at the start, %&quot;,&quot;Charge at the end, %&quot;,Start not seen,End not seen,Cut by the month" xml:space="preserve"><value>Початок;Кінець;Тривалість;Енергія, Вт·год;Заряд на початку, %;Заряд наприкінці, %;Початок не бачили;Кінець не бачили;Обрізано межею місяця</value></data>
+  <data name="11/9/2026 17:02:00,11/9/2026 19:17:00,2:15:00,1560,99,91,,," xml:space="preserve"><value>09.11.2026 17:02:00;09.11.2026 19:17:00;2:15:00;1560;99;91;;;</value></data>
+  <data name="11/12/2026 09:42:07,11/12/2026 10:27:22,0:45:15,208.2,99,91,yes,," xml:space="preserve"><value>12.11.2026 09:42:07;12.11.2026 10:27:22;0:45:15;208,2;99;91;так;;</value></data>
+  <data name="11/9/2026 17:02:00,ongoing,0:40:00,1560,99,91,,," xml:space="preserve"><value>09.11.2026 17:02:00;триває;0:40:00;1560;99;91;;;</value></data>
+  <data name="11/1/2026 00:00:00,11/1/2026 00:30:00,0:30:00,200,,91,,,began earlier" xml:space="preserve"><value>01.11.2026 00:00:00;01.11.2026 00:30:00;0:30:00;200;;91;;;почалося раніше</value></data>
+
+  <!-- Settings window: deleting what was recorded -->
+  <data name="nothing" xml:space="preserve"><value>нічого</value></data>
+  <data name="the last day" xml:space="preserve"><value>останню добу</value></data>
+  <data name="the last week" xml:space="preserve"><value>останній тиждень</value></data>
+  <data name="the last month" xml:space="preserve"><value>останній місяць</value></data>
+  <data name="Measurements deleted: 2. Outages deleted: 2. The diagnostic log is cleared." xml:space="preserve"><value>Видалено замірів: 2. Видалено відключень: 2. Журнал роботи очищено.</value></data>
+
+  <!-- Station report and the cards of the details window -->
+  <data name="Latest answer at 22:42:34. The station has stopped answering this request." xml:space="preserve"><value>Остання відповідь: 22:42:34. Станція перестала відповідати на цей запит.</value></data>
+  <data name="Solar inputs" xml:space="preserve"><value>Сонячні входи</value></data>
+  <data name="Energy meter" xml:space="preserve"><value>Лічильник енергії</value></data>
+  <data name="CT not connected" xml:space="preserve"><value>CT не під'єднано</value></data>
+  <data name="not supported by this station" xml:space="preserve"><value>ця станція не підтримує</value></data>
+  <data name="no answer" xml:space="preserve"><value>немає відповіді</value></data>
+  <data name="State of charge" xml:space="preserve"><value>Рівень заряду</value></data>
+  <data name="Temperature" xml:space="preserve"><value>Температура</value></data>
+  <data name="Remaining capacity" xml:space="preserve"><value>Залишкова ємність</value></data>
+  <data name="Rated capacity" xml:space="preserve"><value>Номінальна ємність</value></data>
+  <data name="Charging allowed" xml:space="preserve"><value>Заряджання дозволено</value></data>
+  <data name="Discharging allowed" xml:space="preserve"><value>Розряд дозволено</value></data>
+  <data name="yes" xml:space="preserve"><value>так</value></data>
+  <data name="no" xml:space="preserve"><value>ні</value></data>
+  <data name="Total power" xml:space="preserve"><value>Загальна потужність</value></data>
+  <data name="Input 1" xml:space="preserve"><value>Вхід 1</value></data>
+  <data name="Input 2" xml:space="preserve"><value>Вхід 2</value></data>
+  <data name="120 W, 36.5 V, 3.29 A, working" xml:space="preserve"><value>120 Вт, 36,5 В, 3,29 А, працює</value></data>
+  <data name="0 W, standby" xml:space="preserve"><value>0 Вт, очікування</value></data>
+  <data name="State" xml:space="preserve"><value>Стан</value></data>
+  <data name="MAC" xml:space="preserve"><value>MAC-адреса</value></data>
+  <data name="Errors" xml:space="preserve"><value>Помилки</value></data>
+  <data name="The efficiency must be from 50 to 100%." xml:space="preserve"><value>ККД має бути від 50 до 100%.</value></data>
+  <data name="The values marked in red need correcting." xml:space="preserve"><value>Значення, позначені червоним, треба виправити.</value></data>
+  <data name="discharging 286 W (calculated; true only if the station is running on the battery)" xml:space="preserve"><value>розряд 286 Вт (розрахунок; правильно, лише якщо станція працює від батареї)</value></data>
+  <data name="charging 2200 W" xml:space="preserve"><value>заряджання 2200 Вт</value></data>
+  <data name="Signal" xml:space="preserve"><value>Сигнал</value></data>
+  <data name="-62 dBm, fair" xml:space="preserve"><value>-62 дБм, задовільний</value></data>
+  <data name="not connected" xml:space="preserve"><value>не під'єднано</value></data>
+  <data name="-286 W" xml:space="preserve"><value>-286 Вт</value></data>
+  <data name="Battery power" xml:space="preserve"><value>Потужність батареї</value></data>
+  <data name="The station answered ES.GetMode with an error: Invalid params (code -32602)." xml:space="preserve"><value>Станція відповіла на ES.GetMode помилкою: Invalid params (код -32602).</value></data>
+  <data name="The station did not answer Bat.GetStatus within 2.5 s." xml:space="preserve"><value>Станція не відповіла на Bat.GetStatus за 2,5 с.</value></data>
+  <data name="The station did not answer Wifi.GetStatus within 3 s." xml:space="preserve"><value>Станція не відповіла на Wifi.GetStatus за 3 с.</value></data>
+  <data name="The station did not answer ES.GetStatus within 3 s." xml:space="preserve"><value>Станція не відповіла на ES.GetStatus за 3 с.</value></data>
+  <data name="Marstek Overlay has run into an error it cannot recover from and will close." xml:space="preserve"><value>Marstek Overlay натрапив на помилку, після якої не може працювати далі, і буде закритий.</value></data>
+  <data name="Details are in the log: C:\Users\Owner\AppData\Roaming\MarstekOverlay\diagnostics.log" xml:space="preserve"><value>Подробиці — в журналі: C:\Users\Owner\AppData\Roaming\MarstekOverlay\diagnostics.log</value></data>
+  <data name="The port must be a number from 1 to 65535." xml:space="preserve"><value>Порт має бути числом від 1 до 65535.</value></data>
+  <data name="The station address must be an IPv4 address such as 192.168.1.50." xml:space="preserve"><value>Адреса станції має бути IPv4-адресою, наприклад 192.168.1.50.</value></data>
+  <data name="The time without an answer must be from 1 to 1440 minutes." xml:space="preserve"><value>Час без відповіді має бути від 1 до 1440 хв.</value></data>
+  <data name="The charge thresholds must be numbers from 1 to 100, separated by spaces or semicolons." xml:space="preserve"><value>Пороги заряду мають бути числами від 1 до 100 через пробіл або крапку з комою.</value></data>
+  <data name="The battery temperature limits must lie between -40 and 100 °C, the lower one below the upper." xml:space="preserve"><value>Межі температури батареї мають бути в діапазоні від -40 до 100 °C, нижня — менша за верхню.</value></data>
+  <data name="The reserve level must be from 0 to 99%." xml:space="preserve"><value>Резерв заряду має бути від 0 до 99%.</value></data>
+  <data name="The address or the numbers were changed and not saved. Press Close once more to drop the changes, or Save to keep them." xml:space="preserve"><value>Адресу чи числа змінено, але не збережено. Натисніть «Закрити» ще раз, щоб відкинути зміни, або «Зберегти», щоб лишити їх.</value></data>
+  <data name="The startup entry in the registry could not be changed: access is denied." xml:space="preserve"><value>Не вдалося змінити запис автозапуску в реєстрі: немає доступу.</value></data>
+  <data name="access is denied" xml:space="preserve"><value>немає доступу</value></data>
+  <data name="the file is in use by another program or cannot be reached" xml:space="preserve"><value>файл зайнятий іншою програмою або недоступний</value></data>
+  <data name="an unexpected error occurred" xml:space="preserve"><value>сталася непередбачена помилка</value></data>
+  <data name="In effect: 4 min, at least two poll intervals." xml:space="preserve"><value>Діє 4 хв: щонайменше два інтервали опитування.</value></data>
+  <data name="Stations found: 2. Select one to use its address." xml:space="preserve"><value>Знайдено станцій: 2. Виберіть станцію, щоб підставити її адресу.</value></data>
+  <data name="No station answered." xml:space="preserve"><value>Жодна станція не відповіла.</value></data>
+  <data name="The search failed. Details: The network is unreachable." xml:space="preserve"><value>Пошук не вдався. Подробиці: The network is unreachable.</value></data>
+  <data name="Address of VenusE 3.0 filled in. Test the connection, then save." xml:space="preserve"><value>Адресу VenusE 3.0 підставлено. Перевірте підключення й збережіть.</value></data>
+  <data name="Measurements deleted: 1. The diagnostic log is cleared only in part: the file is in use by another program or cannot be reached." xml:space="preserve"><value>Видалено замірів: 1. Журнал роботи очищено лише частково: файл зайнятий іншою програмою або недоступний.</value></data>
+  <data name="unknown" xml:space="preserve"><value>невідоме</value></data>
+  <data name="Delete this, keeping the last week?" xml:space="preserve"><value>Видалити це, залишивши останній тиждень?</value></data>
+  <data name="Measurements for the charts" xml:space="preserve"><value>Заміри для графіків</value></data>
+  <data name="Diagnostic log" xml:space="preserve"><value>Журнал роботи застосунку (лог)</value></data>
+  <data name="It cannot be restored." xml:space="preserve"><value>Відновити видалене буде неможливо.</value></data>
+  <data name="Refresh now" xml:space="preserve"><value>Оновити зараз</value></data>
+  <data name="Compact view" xml:space="preserve"><value>Компактний вигляд</value></data>
+  <data name="Always on top" xml:space="preserve"><value>Поверх усіх вікон</value></data>
+  <data name="Let clicks through" xml:space="preserve"><value>Пропускати кліки миші</value></data>
+  <data name="Details…" xml:space="preserve"><value>Деталі…</value></data>
+  <data name="Settings…" xml:space="preserve"><value>Налаштування…</value></data>
+  <data name="Exit" xml:space="preserve"><value>Вийти</value></data>
+  <data name="Hide panel" xml:space="preserve"><value>Приховати панель</value></data>
+</root>

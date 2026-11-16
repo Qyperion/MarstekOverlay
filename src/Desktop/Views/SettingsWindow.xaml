@@ -1,0 +1,308 @@
+﻿<Window x:Class="MarstekOverlay.Desktop.Views.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:MarstekOverlay.Desktop.Localization"
+        xmlns:controls="clr-namespace:MarstekOverlay.Desktop.Controls"
+        xmlns:settings="clr-namespace:MarstekOverlay.Desktop.Settings"
+        Title="{loc:Text Settings_Title}" Width="620" Height="720" MinWidth="540" MinHeight="500"
+        Background="{StaticResource Brush.Window}" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Styling/WindowStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="NumberField" TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+                <Setter Property="Width" Value="56"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Margin="16,10,16,16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TabControl Grid.Row="0" SelectedIndex="{Binding SelectedTabIndex}">
+            <TabItem Header="{loc:Text Settings_Station}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" DataContext="{Binding Probe}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="90"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{loc:Text Settings_IpAddress}" Margin="0,0,8,0"/>
+                            <TextBox Grid.Column="1" Text="{Binding Host, UpdateSourceTrigger=PropertyChanged}"
+                                     AutomationProperties.Name="{loc:Text Settings_IpAddress}"/>
+                            <TextBlock Grid.Column="2" Text="{loc:Text Settings_UdpPort}" Margin="16,0,8,0"/>
+                            <TextBox Grid.Column="3" Text="{Binding Port, UpdateSourceTrigger=PropertyChanged}"
+                                     AutomationProperties.Name="{loc:Text Settings_UdpPort}"/>
+                        </Grid>
+                        <TextBlock Text="{Binding Errors[Host]}" Style="{StaticResource FieldError}"/>
+                        <TextBlock Text="{Binding Errors[Port]}" Style="{StaticResource FieldError}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,8" DataContext="{Binding Probe}">
+                        <Button Content="{loc:Text Settings_FindStations}" Command="{Binding FindStationsCommand}"/>
+                        <Button Content="{loc:Text Settings_TestConnection}" Margin="8,0,0,0"
+                                Command="{Binding TestConnectionCommand}"/>
+                    </StackPanel>
+
+                    <ListBox Grid.Row="2" Height="64" DataContext="{Binding Probe}" ItemsSource="{Binding Devices}"
+                             SelectedItem="{Binding SelectedDevice}">
+                        <ListBox.Style>
+                            <Style TargetType="ListBox" BasedOn="{StaticResource {x:Type ListBox}}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Devices.Count}" Value="0">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ListBox.Style>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}" Foreground="{StaticResource Brush.Primary}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <TextBox Grid.Row="3" Margin="0,10,0,0" DataContext="{Binding Probe}" Text="{Binding Report, Mode=OneWay}"
+                             IsReadOnly="True"
+                             TextWrapping="NoWrap" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                             FontFamily="Consolas" FontSize="12">
+                        <TextBox.Resources>
+                            <!-- The square where the two scroll bars meet is painted with this system brush. -->
+                            <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent"/>
+                        </TextBox.Resources>
+                        <TextBox.Style>
+                            <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+                                <Style.Triggers>
+                                    <Trigger Property="Text" Value="">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBox.Style>
+                    </TextBox>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="{loc:Text Settings_Panel}">
+                <ScrollViewer Style="{StaticResource ScrollingPage}">
+                    <StackPanel>
+                        <GroupBox Header="{loc:Text Settings_Appearance}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="44"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="{loc:Text Settings_BackgroundOpacity}"
+                                           Style="{StaticResource FieldLabel}"/>
+                                <Slider Grid.Row="0" Grid.Column="1" Minimum="{Binding Source={x:Static settings:OverlaySettings.MinOpacityPercent}, Mode=OneTime}"
+                                        Maximum="{Binding Source={x:Static settings:OverlaySettings.MaxOpacityPercent}, Mode=OneTime}" TickFrequency="1"
+                                        IsSnapToTickEnabled="True" Value="{Binding OpacityPercent}" VerticalAlignment="Center"
+                                        AutomationProperties.Name="{loc:Text Settings_BackgroundOpacity}"/>
+                                <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding OpacityText}"
+                                           Foreground="{StaticResource Brush.Primary}" HorizontalAlignment="Right"/>
+
+                                <TextBlock Grid.Row="1" Grid.Column="0" Text="{loc:Text Settings_PanelScale}"
+                                           Style="{StaticResource FieldLabel}" Margin="0,10,12,0"/>
+                                <Slider Grid.Row="1" Grid.Column="1" Minimum="{Binding Source={x:Static settings:OverlaySettings.MinScalePercent}, Mode=OneTime}"
+                                        Maximum="{Binding Source={x:Static settings:OverlaySettings.MaxScalePercent}, Mode=OneTime}" TickFrequency="5"
+                                        IsSnapToTickEnabled="True" Value="{Binding ScalePercent}" VerticalAlignment="Center"
+                                        Margin="0,10,0,0" AutomationProperties.Name="{loc:Text Settings_PanelScale}"/>
+                                <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding ScaleText}"
+                                           Foreground="{StaticResource Brush.Primary}" HorizontalAlignment="Right"
+                                           Margin="0,10,0,0"/>
+
+                                <CheckBox Grid.Row="2" Grid.ColumnSpan="3" Content="{loc:Text Overlay_Compact}"
+                                          IsChecked="{Binding IsCompact}" Margin="0,12,0,0"/>
+                                <TextBlock Grid.Row="3" Grid.ColumnSpan="3" Text="{loc:Text Settings_CompactHint}"
+                                           Style="{StaticResource Hint}" Margin="20,3,0,0"/>
+                            </Grid>
+                        </GroupBox>
+
+                        <GroupBox Header="{loc:Text Settings_Behaviour}">
+                            <StackPanel>
+                                <CheckBox Content="{loc:Text Overlay_AlwaysOnTop}" IsChecked="{Binding IsTopmost}"/>
+                                <CheckBox Content="{loc:Text Overlay_ClickThrough}" IsChecked="{Binding IsClickThrough}"
+                                          Margin="0,10,0,0"/>
+                                <TextBlock Text="{loc:Text Settings_ClickThroughHint}" Style="{StaticResource Hint}"
+                                           Margin="20,3,0,0"/>
+                                <CheckBox Content="{loc:Text Settings_HiddenAtStartup}" IsChecked="{Binding IsHiddenAtStartup}"
+                                          Margin="0,10,0,0"/>
+                                <TextBlock Text="{loc:Text Settings_HiddenAtStartupHint}" Style="{StaticResource Hint}"
+                                           Margin="20,3,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="{loc:Text Settings_ShownRows}">
+                            <StackPanel>
+                                <CheckBox Content="{loc:Text Settings_LoadChart}" IsChecked="{Binding IsChartShown}"/>
+                                <StackPanel Orientation="Horizontal" Margin="20,6,0,0">
+                                    <TextBlock Text="{loc:Text Settings_ChartPeriod}" Style="{StaticResource FieldLabel}"/>
+                                    <ItemsControl ItemsSource="{Binding ChartPeriods}" IsEnabled="{Binding IsChartShown}"
+                                                  Style="{StaticResource ChoiceList}" Tag="ChartPeriod"/>
+                                </StackPanel>
+
+                                <ItemsControl ItemsSource="{Binding Rows}" Style="{StaticResource SwitchGrid}" Margin="0,6,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="{loc:Text Settings_Alerts}">
+                <ScrollViewer Style="{StaticResource ScrollingPage}">
+                    <StackPanel>
+                        <GroupBox Header="{loc:Text Settings_AlertKinds}">
+                            <StackPanel>
+                                <ItemsControl ItemsSource="{Binding Alerts}" Style="{StaticResource SwitchGrid}" Margin="0,-8,0,0"/>
+                                <TextBlock Text="{loc:Text Settings_AlertsNote}" Style="{StaticResource Hint}" Margin="0,10,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="{loc:Text Settings_AlertLimits}">
+                            <StackPanel Grid.IsSharedSizeScope="True">
+                                <controls:FieldRow Label="{loc:Text Settings_ChargeThresholds}" Error="{Binding Errors[ChargeThresholds]}"
+                                                   Hint="{loc:Text Settings_ChargeThresholdsHint}">
+                                    <TextBox Width="140" HorizontalAlignment="Left"
+                                             Text="{Binding ChargeThresholds, UpdateSourceTrigger=PropertyChanged}"
+                                             AutomationProperties.Name="{loc:Text Settings_ChargeThresholds}"/>
+                                </controls:FieldRow>
+
+                                <!-- The two limits are marked together and share the message. -->
+                                <controls:FieldRow Label="{loc:Text Settings_BatteryTemperatureFrom}" Margin="0,10,0,0"
+                                                   Error="{Binding Errors[MinBatteryTemperature]}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBox Style="{StaticResource NumberField}"
+                                                 Text="{Binding MinBatteryTemperature, UpdateSourceTrigger=PropertyChanged}"
+                                                 AutomationProperties.Name="{loc:Text Settings_MinBatteryTemperature}"/>
+                                        <TextBlock Text="{loc:Text Settings_BatteryTemperatureTo}" Margin="8,0"/>
+                                        <TextBox Style="{StaticResource NumberField}"
+                                                 Text="{Binding MaxBatteryTemperature, UpdateSourceTrigger=PropertyChanged}"
+                                                 AutomationProperties.Name="{loc:Text Settings_MaxBatteryTemperature}"/>
+                                    </StackPanel>
+                                </controls:FieldRow>
+
+                                <controls:FieldRow Label="{loc:Text Settings_StaleAfter}" Margin="0,10,0,0"
+                                                   Error="{Binding Errors[StaleAfterMinutes]}" Hint="{Binding StaleAfterInEffect}">
+                                    <TextBox Style="{StaticResource NumberField}"
+                                             Text="{Binding StaleAfterMinutes, UpdateSourceTrigger=PropertyChanged}"
+                                             AutomationProperties.Name="{loc:Text Settings_StaleAfter}"/>
+                                </controls:FieldRow>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <Button Content="{loc:Text Settings_TestNotification}" HorizontalAlignment="Left"
+                                Command="{Binding ShowTestNotificationCommand}"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="{loc:Text Settings_General}">
+                <ScrollViewer Style="{StaticResource ScrollingPage}">
+                    <StackPanel>
+                        <GroupBox Header="{loc:Text Settings_Application}">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{loc:Text Settings_Language}" Style="{StaticResource FieldLabel}"/>
+                                    <ItemsControl ItemsSource="{Binding Languages}" Style="{StaticResource ChoiceList}"
+                                                  Tag="Language"/>
+                                </StackPanel>
+                                <CheckBox Content="{loc:Text Settings_Autostart}" IsChecked="{Binding StartsWithWindows}"
+                                          Margin="0,12,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="{loc:Text Settings_Forecast}">
+                            <StackPanel Grid.IsSharedSizeScope="True">
+                                <controls:FieldRow Label="{loc:Text Settings_ReserveLevel}" Error="{Binding Errors[ReserveSocPercent]}">
+                                    <TextBox Style="{StaticResource NumberField}"
+                                             Text="{Binding ReserveSocPercent, UpdateSourceTrigger=PropertyChanged}"
+                                             AutomationProperties.Name="{loc:Text Settings_ReserveLevel}"/>
+                                </controls:FieldRow>
+
+                                <controls:FieldRow Label="{loc:Text Settings_DischargeEfficiency}" Margin="0,10,0,0"
+                                                   Error="{Binding Errors[DischargeEfficiencyPercent]}">
+                                    <TextBox Style="{StaticResource NumberField}"
+                                             Text="{Binding DischargeEfficiencyPercent, UpdateSourceTrigger=PropertyChanged}"
+                                             AutomationProperties.Name="{loc:Text Settings_DischargeEfficiency}"/>
+                                </controls:FieldRow>
+
+                                <controls:FieldRow Label="{loc:Text Settings_ChargeEfficiency}" Margin="0,10,0,0"
+                                                   Error="{Binding Errors[ChargeEfficiencyPercent]}">
+                                    <TextBox Style="{StaticResource NumberField}"
+                                             Text="{Binding ChargeEfficiencyPercent, UpdateSourceTrigger=PropertyChanged}"
+                                             AutomationProperties.Name="{loc:Text Settings_ChargeEfficiency}"/>
+                                </controls:FieldRow>
+
+                                <TextBlock Text="{loc:Text Settings_ForecastHint}" Style="{StaticResource Hint}" Margin="0,10,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="{loc:Text StoredData_Title}" DataContext="{Binding StoredData}">
+                            <StackPanel>
+                                <CheckBox Content="{loc:Text StoredData_Samples}" IsChecked="{Binding DeletesSamples}"/>
+                                <CheckBox Content="{loc:Text StoredData_Outages}" IsChecked="{Binding DeletesOutages}"
+                                          Margin="0,8,0,0"/>
+                                <CheckBox Content="{loc:Text StoredData_Log}" IsChecked="{Binding DeletesLog}"
+                                          Margin="0,8,0,0"/>
+
+                                <DockPanel Margin="0,12,0,4">
+                                    <TextBlock DockPanel.Dock="Left" Text="{loc:Text StoredData_Keep}"
+                                               Style="{StaticResource FieldLabel}" VerticalAlignment="Top"/>
+                                    <ItemsControl ItemsSource="{Binding KeptPeriods}" Style="{StaticResource ChoiceList}"
+                                                  Tag="KeptPeriod"/>
+                                </DockPanel>
+
+                                <Button Content="{loc:Text StoredData_Delete}" HorizontalAlignment="Left" Margin="0,8,0,0"
+                                        IsEnabled="{Binding CanDelete}" Click="DeleteStoredData_Click"/>
+
+                                <TextBlock DataContext="{Binding Status}" Text="{Binding Text}" Style="{StaticResource StatusText}"
+                                           HorizontalAlignment="Left" Margin="0,10,0,0"/>
+
+                                <TextBlock Text="{loc:Text StoredData_Hint}" Style="{StaticResource Hint}" Margin="0,10,0,0"/>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+
+        <TextBlock Grid.Row="1" DataContext="{Binding Status.Message}" Text="{Binding Text}"
+                   Style="{StaticResource StatusText}" Margin="0,12,0,0"/>
+
+        <TextBlock Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,12,0,0" FontSize="11"
+                   Foreground="{StaticResource Brush.Secondary}">
+            <Run Text="{loc:Text Settings_Version}"/>
+            <Run Text="{Binding Version, Mode=OneTime}"/>
+        </TextBlock>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
+            <Button Content="{loc:Text Settings_Save}" IsDefault="True" Command="{Binding SaveCommand}"/>
+            <Button Content="{loc:Text Settings_Close}" IsCancel="True" Margin="8,0,0,0"
+                    Background="{StaticResource Brush.FieldBorder}" Click="Close_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

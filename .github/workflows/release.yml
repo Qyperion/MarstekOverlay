@@ -1,0 +1,38 @@
+name: Release
+
+# A tag such as v1.2.0 builds the installer and the two portable exes and publishes them as a release.
+# The tag must name the Version of src/Desktop/Desktop.csproj.
+on:
+  push:
+    tags: ['v[0-9]+.[0-9]+.[0-9]+']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+
+      - name: Test
+        run: dotnet test --solution MarstekOverlay.slnx -c Release
+
+      - name: Install Inno Setup
+        run: choco install innosetup --no-progress -y
+
+      - name: Build the release files
+        shell: pwsh
+        run: ./tools/Release/Build-Release.ps1 -Version '${{ github.ref_name }}'
+
+      - name: Publish the release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $files = Get-ChildItem artifacts/release -File | ForEach-Object FullName
+          gh release create '${{ github.ref_name }}' $files --title '${{ github.ref_name }}' --generate-notes --verify-tag
